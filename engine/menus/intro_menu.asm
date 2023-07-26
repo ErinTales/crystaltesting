@@ -28,16 +28,16 @@ PrintDayOfWeek:
 	ret
 
 .Days:
-	db "SUN@"
-	db "MON@"
-	db "TUES@"
-	db "WEDNES@"
-	db "THURS@"
-	db "FRI@"
-	db "SATUR@"
+	db "にち@"
+	db "げつ@"
+	db "か@"
+	db "すい@"
+	db "もく@"
+	db "きん@"
+	db "ど@"
 
 .Day:
-	db "DAY@"
+	db "ようび@"
 
 NewGame_ClearTilemapEtc:
 	xor a
@@ -240,17 +240,9 @@ SetDefaultBoxNames:
 	push hl
 	ld de, .Box
 	call CopyName2
+	ld a, $f7
+	add c
 	dec hl
-	ld a, c
-	inc a
-	cp 10
-	jr c, .less
-	sub 10
-	ld [hl], "1"
-	inc hl
-
-.less
-	add "0"
 	ld [hli], a
 	ld [hl], "@"
 	pop hl
@@ -263,20 +255,24 @@ SetDefaultBoxNames:
 	ret
 
 .Box:
-	db "BOX@"
+	db "ボックス@"
 
 InitializeMagikarpHouse:
 	ld hl, wBestMagikarpLengthFeet
-	ld a, $3
+	ld a, $4
 	ld [hli], a
-	ld a, $6
+	ld a, $1d
 	ld [hli], a
-	ld de, .Ralph
-	call CopyName2
+	ld a, "ヤ"
+	ld [hli], a
+	ld a, "ス"
+	ld [hli], a
+	ld a, "ア"
+	ld [hli], a
+	ld a, "キ"
+	ld [hli], a
+	ld [hl], "@"
 	ret
-
-.Ralph:
-	db "RALPH@"
 
 InitializeNPCNames:
 	ld hl, .Rival
@@ -300,9 +296,9 @@ InitializeNPCNames:
 	ret
 
 .Rival:  db "???@"
-.Red:    db "RED@"
-.Green:  db "GREEN@"
-.Mom:    db "MOM@"
+.Red:    db "レッド@"
+.Green:  db "グりーン@"
+.Mom:    db "おかあさん@"
 
 InitializeWorld:
 	call ShrinkPlayer
@@ -493,10 +489,6 @@ DisplaySaveInfoOnContinue:
 	call DisplayNormalContinueData
 	ret
 
-DisplaySaveInfoOnSave:
-	lb de, 4, 0
-	jr DisplayNormalContinueData
-
 DisplayNormalContinueData:
 	call Continue_LoadMenuHeader
 	call Continue_DisplayBadgesDexPlayerName
@@ -537,10 +529,10 @@ Continue_LoadMenuHeader:
 .MenuData_Dex:
 	db 0 ; flags
 	db 4 ; items
-	db "PLAYER@"
-	db "BADGES@"
-	db "#DEX@"
-	db "TIME@"
+	db "しゅじんこう　<PLAYER>@"
+	db "もっているバッジ　　　　こ@"
+	db "#ずかん　　　　ひき@"
+	db "プレイじかん@"
 
 .MenuHeader_NoDex:
 	db MENU_BACKUP_TILES ; flags
@@ -551,10 +543,10 @@ Continue_LoadMenuHeader:
 .MenuData_NoDex:
 	db 0 ; flags
 	db 4 ; items
-	db "PLAYER <PLAYER>@"
-	db "BADGES@"
-	db " @"
-	db "TIME@"
+	db "しゅじんこう　<PLAYER>@"
+	db "もっているバッジ　　　　こ@"
+	db "　@"
+	db "プレイじかん@"
 
 Continue_DisplayBadgesDexPlayerName:
 	call MenuBoxCoord2Tile
@@ -568,16 +560,7 @@ Continue_DisplayBadgesDexPlayerName:
 	add hl, de
 	call Continue_DisplayPokedexNumCaught
 	pop hl
-	push hl
-	decoord 8, 2, 0
-	add hl, de
-	ld de, .Player
-	call PlaceString
-	pop hl
 	ret
-
-.Player:
-	db "<PLAYER>@"
 
 Continue_PrintGameTime:
 	decoord 9, 8, 0
@@ -711,11 +694,25 @@ OakSpeech:
 	ret
 
 OakText1:
-	text_start _OakText1
-	text_end
+	text "いやあ　またせた！"
+
+	para "ポケットモンスターの　せかいへ"
+	line "ようこそ！"
+
+	para "わしの　なまえは　オーキド"
+
+	para "みんなからは　#　はかせと"
+	line "したわれて　おるよ"
+	prompt
 
 OakText2:
-	text_start _OakText2
+	text "ポケットモンスター⋯⋯⋯#"
+
+	para "この　せかいには"
+	line "ポケットモンスターと　よばれる"
+	cont "いきもの　たちが"
+	cont "いたるところに　すんでいる！"
+	text_end
 	text_asm
 	ld a, WOOPER
 	call PlayMonCry
@@ -724,24 +721,52 @@ OakText2:
 	ret
 
 OakText3:
-	text_start _OakText3
+	text_promptbutton
 	text_end
 
 OakText4:
-	text_start _OakText4
-	text_end
+	text "ひとは　#たちと"
+	line "なかよく　あそんだり"
+	cont "いっしょに　たたかったり⋯⋯⋯⋯"
+	cont "たすけあい　ながら"
+	cont "くらして　いるのじゃ"
+	prompt
 
 OakText5:
-	text_start _OakText5
-	text_end
+	text "しかし　わしらは　#のすべてを"
+	line "しっている　わけでは　ない"
+
+	para "#の　ひみつは"
+	line "まだまだ　いっぱい　ある！"
+
+	para "わしは　それを　ときあかすために"
+	line "まいにち　#の　けんきゅうを"
+	cont "つづけている　という　わけじゃ！"
+	prompt
 
 OakText6:
-	text_start _OakText6
-	text_end
+	text "さて<……>"
+	line "そろそろ　きみの　なまえを"
+	cont "おしえて　もらおう！"
+	prompt
 
 OakText7:
-	text_start _OakText7
-	text_end
+	text "<PLAYER>！"
+	line "じゅんびは　いいかな？"
+	
+	para "いよいよ　これから"
+	line "きみの　ものがたりが　はじまる！"
+
+	para "たのしいことも　くるしいことも"
+	line "いっぱい　きみを　まってるだろう！"
+
+	para "ゆめと　ぼうけんと！"
+	line "ポケット　モンスターの　せかいへ！"
+	cont "レッツ　"
+	db $09
+	db "ー！"
+	para "あとで　また　あおう！"
+	done
 
 NamePlayer:
 	farcall MovePlayerPicRight
@@ -775,18 +800,11 @@ NamePlayer:
 
 	ld hl, wPlayerName
 	ld de, .Chris
-	ld a, [wPlayerGender]
-	bit PLAYERGENDER_FEMALE_F, a
-	jr z, .Male
-	ld de, .Kris
-.Male:
 	call InitName
 	ret
 
 .Chris:
-	db "CHRIS@@@@@@"
-.Kris:
-	db "KRIS@@@@@@@"
+	db "クりス@@@"
 
 GSShowPlayerNamingChoices: ; unreferenced
 	call LoadMenuHeader
@@ -1025,11 +1043,10 @@ StartTitleScreen:
 	jp hl
 
 .dw
-	dw Intro_MainMenu
 	dw DeleteSaveData
 	dw IntroSequence
 	dw IntroSequence
-	dw ResetClock
+	dw IntroSequence
 
 .TitleScreen:
 	farcall _TitleScreen
@@ -1100,18 +1117,12 @@ TitleScreenEntrance:
 
 ; Reversed signage for every other line's position.
 ; This is responsible for the interlaced effect.
+	ld hl, $d118
+	ld bc, $0028
 	ld a, e
 	xor $ff
 	inc a
-
-	ld b, 8 * 10 / 2 ; logo height / 2
-	ld hl, wLYOverrides + 1
-.loop
-	ld [hli], a
-	inc hl
-	dec b
-	jr nz, .loop
-
+	call ByteFill
 	farcall AnimateTitleCrystal
 	ret
 
@@ -1166,36 +1177,6 @@ TitleScreenMain:
 	cp  D_UP + B_BUTTON + SELECT
 	jr z, .delete_save_data
 
-; To bring up the clock reset dialog:
-
-; Hold Down + B + Select to initiate the sequence.
-	ldh a, [hClockResetTrigger]
-	cp $34
-	jr z, .check_clock_reset
-
-	ld a, [hl]
-	and D_DOWN + B_BUTTON + SELECT
-	cp  D_DOWN + B_BUTTON + SELECT
-	jr nz, .check_start
-
-	ld a, $34
-	ldh [hClockResetTrigger], a
-	jr .check_start
-
-; Keep Select pressed, and hold Left + Up.
-; Then let go of Select.
-.check_clock_reset
-	bit SELECT_F, [hl]
-	jr nz, .check_start
-
-	xor a
-	ldh [hClockResetTrigger], a
-
-	ld a, [hl]
-	and D_LEFT + D_UP
-	cp  D_LEFT + D_UP
-	jr z, .reset_clock
-
 ; Press Start or A to start the game.
 .check_start
 	ld a, [hl]
@@ -1234,15 +1215,6 @@ TitleScreenMain:
 	inc [hl]
 	ret
 
-.reset_clock
-	ld a, TITLESCREENOPTION_RESET_CLOCK
-	ld [wTitleScreenSelectedOption], a
-
-; Return to the intro sequence.
-	ld hl, wJumptableIndex
-	set 7, [hl]
-	ret
-
 TitleScreenEnd:
 ; Wait until the music is done fading.
 
@@ -1263,10 +1235,6 @@ TitleScreenEnd:
 
 DeleteSaveData:
 	farcall _DeleteSaveData
-	jp Init
-
-ResetClock:
-	farcall _ResetClock
 	jp Init
 
 UpdateTitleTrailSprite: ; unreferenced
@@ -1361,4 +1329,5 @@ GameInit::
 	ld a, $90
 	ldh [hWY], a
 	call WaitBGMap
+	farcall Function16c000
 	jp IntroSequence

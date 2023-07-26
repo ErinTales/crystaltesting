@@ -25,6 +25,9 @@ def compare_files(file1, file2, sym_file):
     for i in range(diff_address, diff_address + 8):
         bank = i // 0x4000
         address = i % 0x4000
+        # Adjust for switchable bank area
+        if bank != 0:
+            address += 0x4000
         print(f"{bank:02X}:{address:04X}  {bytes1[i]:02X}  {bytes2[i]:02X}")
 
     # Find the closest symbol from the sym file
@@ -35,10 +38,13 @@ def compare_files(file1, file2, sym_file):
             if line.startswith(';'):  # skip comment lines
                 continue
             parts = line.strip().split()
-            address = int(parts[0].replace(':', ''), 16)
+            bank_address = parts[0]
+            bank = int(bank_address.split(':')[0], 16)
+            address = int(bank_address.split(':')[1], 16)
+            absolute_address = bank * 0x4000 + (address if bank == 0 else address - 0x4000)
             symbol = parts[1]
-            if address <= diff_address and (closest_address is None or address > closest_address):
-                closest_address = address
+            if absolute_address <= diff_address and (closest_address is None or absolute_address > closest_address):
+                closest_address = absolute_address
                 closest_symbol = symbol
 
     if closest_symbol is None:

@@ -30,7 +30,7 @@ def parse_rom(rom_file, address):
         data = []
         while True:
             byte = f.read(1)
-            if not byte or byte[0] == 0x50:  # End of string or file
+            if not byte or byte[0] == 0x57 or byte[0] == 0x58:  # End of string or file
                 break
             data.append(byte[0])
     return data

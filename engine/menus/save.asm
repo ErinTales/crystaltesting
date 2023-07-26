@@ -1,6 +1,5 @@
 SaveMenu:
 	call LoadStandardMenuHeader
-	farcall DisplaySaveInfoOnSave
 	call SpeechTextbox
 	call UpdateSprites
 	farcall SaveMenu_CopyTilemapAtOnce

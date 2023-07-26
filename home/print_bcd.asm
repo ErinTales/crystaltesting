@@ -33,6 +33,7 @@ PrintBCDNumber::
 	dec hl
 .skipLeftAlignmentAdjustment
 	ld [hl], "¥" ; currency symbol
+.print_letter_delay
 	call PrintLetterDelay
 	inc hl
 .done

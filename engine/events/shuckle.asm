@@ -42,16 +42,30 @@ GiveShuckle:
 	dec a
 	ld hl, wPartyMonNicknames
 	call SkipNames
-	ld de, SpecialShuckleNickname
-	call CopyName2
+	ld a, "ネ"
+	ld [hli], a
+	ld a, "ッ"
+	ld [hli], a
+	ld a, "シ"
+	ld [hli], a
+	ld a, "-"
+	ld [hli], a
+	ld a, "@"
+	ld [hl], a
 
 ; OT.
 	ld a, [wPartyCount]
 	dec a
 	ld hl, wPartyMonOTs
 	call SkipNames
-	ld de, SpecialShuckleOT
-	call CopyName2
+	ld a, "マ"
+	ld [hli], a
+	ld a, "ニ"
+	ld [hli], a
+	ld a, "ア"
+	ld [hli], a
+	ld a, "@"
+	ld [hl], a
 
 ; Engine flag for this event.
 	ld hl, wDailyFlags1
@@ -64,12 +78,6 @@ GiveShuckle:
 	xor a
 	ld [wScriptVar], a
 	ret
-
-SpecialShuckleOT:
-	db "MANIA@"
-
-SpecialShuckleNickname:
-	db "SHUCKIE@"
 
 ReturnShuckie:
 	farcall SelectMonFromParty
@@ -96,17 +104,18 @@ ReturnShuckie:
 	ld a, [wCurPartyMon]
 	ld hl, wPartyMonOTs
 	call SkipNames
-	ld de, SpecialShuckleOT
-.CheckOT:
-	ld a, [de]
-	cp [hl]
+	ld a, [hli]
+	cp "マ"
 	jr nz, .DontReturn
+	ld a, [hli]
+	cp "ニ"
+	jr nz, .DontReturn
+	ld a, [hli]
+	cp "ア"
+	jr nz, .DontReturn
+	ld a, [hli]
 	cp "@"
-	jr z, .done
-	inc de
-	inc hl
-	jr .CheckOT
-
+	jr nz, .DontReturn
 .done
 	farcall CheckCurPartyMonFainted
 	jr c, .fainted

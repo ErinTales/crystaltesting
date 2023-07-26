@@ -201,27 +201,56 @@ ForgetMove:
 	ret
 
 LearnedMoveText:
-	text_start _LearnedMoveText
+	text_ram wMonOrItemNameBuffer
+	text "は　あたらしく"
+	line "@"
+	text_ram wStringBuffer2
+	text "を　おぼえた！@"
+	sound_dex_fanfare_50_79
+	text_promptbutton
 	text_end
 
 MoveAskForgetText:
-	text_start _MoveAskForgetText
-	text_end
+	text "どの　わざを"
+	next "わすれさせたい？"
+	done
 
 StopLearningMoveText:
-	text_start _StopLearningMoveText
-	text_end
+	text "それでは<……>　@"
+	text_ram wStringBuffer2
+	text "を"
+	line "おぼえるのを　あきらめますか？"
+	done
 
 DidNotLearnMoveText:
-	text_start _DidNotLearnMoveText
-	text_end
+	text_ram wMonOrItemNameBuffer
+	text "は　@"
+	text_ram wStringBuffer2
+	text "を"
+	line "おぼえずに　おわった！"
+	prompt
 
 AskForgetMoveText:
-	text_start _AskForgetMoveText
-	text_end
+	text_ram wMonOrItemNameBuffer
+	text "は　あたらしく"
+	line "@"
+	text_ram wStringBuffer2
+	text "を　おぼえたい<……>！"
+
+	para "しかし　@"
+	text_ram wMonOrItemNameBuffer
+	text "は　わざを　４つ"
+	line "おぼえるので　せいいっぱいだ！"
+
+	para "@"
+	text_ram wStringBuffer2
+	text "の　かわりに"
+	line "ほかの　わざを　わすれさせますか？"
+	done
 
 Text_1_2_and_Poof:
-	text_start Text_MoveForgetCount ; 1, 2 and…
+	text "１　２の　<……>@"
+	text_pause
 	text_asm
 	push de
 	ld de, SFX_SWITCH_POKEMON
@@ -231,9 +260,21 @@ Text_1_2_and_Poof:
 	ret
 
 .MoveForgotText:
-	text_start _MoveForgotText
-	text_end
+	text "　ポカン！@"
+	text_pause
+	text_start
+
+	para "@"
+	text_ram wMonOrItemNameBuffer
+	text "は　@"
+	text_ram wStringBuffer1
+	text "の"
+	line "つかいかたを　きれいに　わすれた！"
+
+	para "そして<……>！"
+	prompt
 
 MoveCantForgetHMText:
-	text_start _MoveCantForgetHMText
-	text_end
+	text "それは　たいせつなわざです"
+	line "わすれさせることは　できません！"
+	prompt
