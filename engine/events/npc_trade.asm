@@ -432,12 +432,12 @@ TradeTexts:
 	dw NPCTradeAfterText3
 
 NPCTradeCableText:
-	text_far _NPCTradeCableText
+	text_start _NPCTradeCableText
 	text_end
 
 TradedForText:
 	; traded givemon for getmon
-	text_far Text_NPCTraded
+	text_start Text_NPCTraded
 	text_asm
 	ld de, MUSIC_NONE
 	call PlayMusic
@@ -446,73 +446,73 @@ TradedForText:
 	ret
 
 .done
-	text_far _NPCTradeFanfareText
+	text_start _NPCTradeFanfareText
 	text_end
 
 NPCTradeIntroText1:
-	text_far _NPCTradeIntroText1
+	text_start _NPCTradeIntroText1
 	text_end
 
 NPCTradeCancelText1:
-	text_far _NPCTradeCancelText1
+	text_start _NPCTradeCancelText1
 	text_end
 
 NPCTradeWrongText1:
-	text_far _NPCTradeWrongText1
+	text_start _NPCTradeWrongText1
 	text_end
 
 NPCTradeCompleteText1:
-	text_far _NPCTradeCompleteText1
+	text_start _NPCTradeCompleteText1
 	text_end
 
 NPCTradeAfterText1:
-	text_far _NPCTradeAfterText1
+	text_start _NPCTradeAfterText1
 	text_end
 
 NPCTradeIntroText2:
-	text_far _NPCTradeIntroText2
+	text_start _NPCTradeIntroText2
 	text_end
 
 NPCTradeCancelText2:
-	text_far _NPCTradeCancelText2
+	text_start _NPCTradeCancelText2
 	text_end
 
 NPCTradeWrongText2:
-	text_far _NPCTradeWrongText2
+	text_start _NPCTradeWrongText2
 	text_end
 
 NPCTradeCompleteText2:
-	text_far _NPCTradeCompleteText2
+	text_start _NPCTradeCompleteText2
 	text_end
 
 NPCTradeAfterText2:
-	text_far _NPCTradeAfterText2
+	text_start _NPCTradeAfterText2
 	text_end
 
 NPCTradeIntroText3:
-	text_far _NPCTradeIntroText3
+	text_start _NPCTradeIntroText3
 	text_end
 
 NPCTradeCancelText3:
-	text_far _NPCTradeCancelText3
+	text_start _NPCTradeCancelText3
 	text_end
 
 NPCTradeWrongText3:
-	text_far _NPCTradeWrongText3
+	text_start _NPCTradeWrongText3
 	text_end
 
 NPCTradeCompleteText3:
-	text_far _NPCTradeCompleteText3
+	text_start _NPCTradeCompleteText3
 	text_end
 
 NPCTradeAfterText3:
-	text_far _NPCTradeAfterText3
+	text_start _NPCTradeAfterText3
 	text_end
 
 NPCTradeCompleteText4:
-	text_far _NPCTradeCompleteText4
+	text_start _NPCTradeCompleteText4
 	text_end
 
 NPCTradeAfterText4:
-	text_far _NPCTradeAfterText4
+	text_start _NPCTradeAfterText4
 	text_end

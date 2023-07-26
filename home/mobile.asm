@@ -181,6 +181,7 @@ Function3f20::
 	hlcoord 0, 0, wAttrmap
 	ld b,  6
 	ld c, 20
+Function3eb4::
 	call Function3f35
 	hlcoord 0, 0
 	ld b,  4

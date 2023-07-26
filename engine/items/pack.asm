@@ -615,7 +615,7 @@ GiveItem:
 	call Pack_PrintTextNoScroll
 	ret
 .AnEggCantHoldAnItemText:
-	text_far _AnEggCantHoldAnItemText
+	text_start _AnEggCantHoldAnItemText
 	text_end
 
 QuitItemSubmenu:
@@ -1532,47 +1532,47 @@ PC_Mart_BallsPocketMenuHeader:
 	dba UpdateItemDescription
 
 PackNoItemText: ; unreferenced
-	text_far _PackNoItemText
+	text_start _PackNoItemText
 	text_end
 
 AskThrowAwayText:
-	text_far _AskThrowAwayText
+	text_start _AskThrowAwayText
 	text_end
 
 AskQuantityThrowAwayText:
-	text_far _AskQuantityThrowAwayText
+	text_start _AskQuantityThrowAwayText
 	text_end
 
 ThrewAwayText:
-	text_far _ThrewAwayText
+	text_start _ThrewAwayText
 	text_end
 
 OakThisIsntTheTimeText:
-	text_far _OakThisIsntTheTimeText
+	text_start _OakThisIsntTheTimeText
 	text_end
 
 YouDontHaveAMonText:
-	text_far _YouDontHaveAMonText
+	text_start _YouDontHaveAMonText
 	text_end
 
 RegisteredItemText:
-	text_far _RegisteredItemText
+	text_start _RegisteredItemText
 	text_end
 
 CantRegisterText:
-	text_far _CantRegisterText
+	text_start _CantRegisterText
 	text_end
 
 AskItemMoveText:
-	text_far _AskItemMoveText
+	text_start _AskItemMoveText
 	text_end
 
 PackEmptyText:
-	text_far _PackEmptyText
+	text_start _PackEmptyText
 	text_end
 
 YouCantUseItInABattleText: ; unreferenced
-	text_far _YouCantUseItInABattleText
+	text_start _YouCantUseItInABattleText
 	text_end
 
 PackMenuGFX:

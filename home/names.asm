@@ -121,17 +121,14 @@ GetPokemonName::
 ; Each name is ten characters
 	ld a, [wNamedObjectIndex]
 	dec a
-	ld d, 0
+	ld hl, PokemonNames
 	ld e, a
-	ld h, 0
-	ld l, a
-	add hl, hl
-	add hl, hl
+	ld d, 0
 	add hl, de
-	add hl, hl
-	ld de, PokemonNames
 	add hl, de
-
+	add hl, de
+	add hl, de
+	add hl, de
 ; Terminator
 	ld de, wStringBuffer1
 	push de
@@ -242,12 +239,12 @@ GetTMHMName::
 	ret
 
 .TMText:
-	db "TM"
+	db "わざマシン"
 .TMTextEnd:
 	db "@"
 
 .HMText:
-	db "HM"
+	db "ひでんマシン"
 .HMTextEnd:
 	db "@"
 

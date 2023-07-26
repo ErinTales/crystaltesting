@@ -418,7 +418,7 @@ WrongNumber:
 	writetext .PhoneWrongNumberText
 	end
 .PhoneWrongNumberText:
-	text_far _PhoneWrongNumberText
+	text_start _PhoneWrongNumberText
 	text_end
 
 Script_ReceivePhoneCall:
@@ -544,7 +544,7 @@ HangUp_Beep:
 	ret
 
 PhoneClickText:
-	text_far _PhoneClickText
+	text_start _PhoneClickText
 	text_end
 
 HangUp_BoopOn:
@@ -553,7 +553,7 @@ HangUp_BoopOn:
 	ret
 
 PhoneEllipseText:
-	text_far _PhoneEllipseText
+	text_start _PhoneEllipseText
 	text_end
 
 HangUp_BoopOff:
@@ -712,7 +712,7 @@ PhoneOutOfAreaScript:
 	end
 
 PhoneOutOfAreaText:
-	text_far _PhoneOutOfAreaText
+	text_start _PhoneOutOfAreaText
 	text_end
 
 PhoneScript_JustTalkToThem:
@@ -720,7 +720,7 @@ PhoneScript_JustTalkToThem:
 	end
 
 PhoneJustTalkToThemText:
-	text_far _PhoneJustTalkToThemText
+	text_start _PhoneJustTalkToThemText
 	text_end
 
 PhoneThankYouTextScript: ; unreferenced
@@ -728,5 +728,5 @@ PhoneThankYouTextScript: ; unreferenced
 	end
 
 PhoneThankYouText:
-	text_far _PhoneThankYouText
+	text_start _PhoneThankYouText
 	text_end

@@ -201,27 +201,27 @@ ForgetMove:
 	ret
 
 LearnedMoveText:
-	text_far _LearnedMoveText
+	text_start _LearnedMoveText
 	text_end
 
 MoveAskForgetText:
-	text_far _MoveAskForgetText
+	text_start _MoveAskForgetText
 	text_end
 
 StopLearningMoveText:
-	text_far _StopLearningMoveText
+	text_start _StopLearningMoveText
 	text_end
 
 DidNotLearnMoveText:
-	text_far _DidNotLearnMoveText
+	text_start _DidNotLearnMoveText
 	text_end
 
 AskForgetMoveText:
-	text_far _AskForgetMoveText
+	text_start _AskForgetMoveText
 	text_end
 
 Text_1_2_and_Poof:
-	text_far Text_MoveForgetCount ; 1, 2 and…
+	text_start Text_MoveForgetCount ; 1, 2 and…
 	text_asm
 	push de
 	ld de, SFX_SWITCH_POKEMON
@@ -231,9 +231,9 @@ Text_1_2_and_Poof:
 	ret
 
 .MoveForgotText:
-	text_far _MoveForgotText
+	text_start _MoveForgotText
 	text_end
 
 MoveCantForgetHMText:
-	text_far _MoveCantForgetHMText
+	text_start _MoveCantForgetHMText
 	text_end

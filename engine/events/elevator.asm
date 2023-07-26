@@ -139,7 +139,7 @@ Elevator_AskWhichFloor:
 	ret
 
 AskFloorElevatorText:
-	text_far _AskFloorElevatorText
+	text_start _AskFloorElevatorText
 	text_end
 
 Elevator_GetCurrentFloorText:

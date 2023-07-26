@@ -1189,11 +1189,11 @@ TradeAnim_SentToOTText:
 	ret
 
 .MonWasSentToText:
-	text_far _MonWasSentToText
+	text_start _MonWasSentToText
 	text_end
 
 .MonNameSentToText:
-	text_far _MonNameSentToText
+	text_start _MonNameSentToText
 	text_end
 
 TradeAnim_OTBidsFarewell:
@@ -1207,11 +1207,11 @@ TradeAnim_OTBidsFarewell:
 	ret
 
 .BidsFarewellToMonText:
-	text_far _BidsFarewellToMonText
+	text_start _BidsFarewellToMonText
 	text_end
 
 .MonNameBidsFarewellText:
-	text_far _MonNameBidsFarewellText
+	text_start _MonNameBidsFarewellText
 	text_end
 
 TradeAnim_TakeCareOfText:
@@ -1228,7 +1228,7 @@ TradeAnim_TakeCareOfText:
 	ret
 
 .TakeGoodCareOfMonText:
-	text_far _TakeGoodCareOfMonText
+	text_start _TakeGoodCareOfMonText
 	text_end
 
 TradeAnim_OTSendsText1:
@@ -1244,11 +1244,11 @@ TradeAnim_OTSendsText1:
 	ret
 
 .ForYourMonSendsText:
-	text_far _ForYourMonSendsText
+	text_start _ForYourMonSendsText
 	text_end
 
 .OTSendsText:
-	text_far _OTSendsText
+	text_start _OTSendsText
 	text_end
 
 TradeAnim_OTSendsText2:
@@ -1264,11 +1264,11 @@ TradeAnim_OTSendsText2:
 	ret
 
 .WillTradeText:
-	text_far _WillTradeText
+	text_start _WillTradeText
 	text_end
 
 .ForYourMonWillTradeText:
-	text_far _ForYourMonWillTradeText
+	text_start _ForYourMonWillTradeText
 	text_end
 
 TradeAnim_Wait80Frames:

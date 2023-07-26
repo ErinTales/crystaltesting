@@ -273,7 +273,7 @@ Function4a94e:
 	jr .asm_4a974
 
 MobilePickThreeMonForBattleText:
-	text_far _MobilePickThreeMonForBattleText
+	text_start _MobilePickThreeMonForBattleText
 	text_end
 
 Function4a9c3:
@@ -325,7 +325,7 @@ Function4a9d7:
 	ret
 
 MobileUseTheseThreeMonText:
-	text_far _MobileUseTheseThreeMonText
+	text_start _MobileUseTheseThreeMonText
 	text_end
 
 Function4aa22:
@@ -824,7 +824,7 @@ Function4ad17:
 	ret
 
 MobileOnlyThreeMonMayEnterText:
-	text_far _MobileOnlyThreeMonMayEnterText
+	text_start _MobileOnlyThreeMonMayEnterText
 	text_end
 
 Function4ad56:

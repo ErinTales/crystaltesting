@@ -24,7 +24,7 @@ InitDisplayForHallOfFame:
 	ret
 
 .SavingRecordText:
-	text_far _SavingRecordText
+	text_start _SavingRecordText
 	text_end
 
 InitDisplayForRedCredits:

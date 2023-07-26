@@ -4476,7 +4476,7 @@ BattleCommand_StatUpMessage:
 	jp BattleTextbox
 
 .stat
-	text_far Text_BattleEffectActivate
+	text_start Text_BattleEffectActivate
 	text_asm
 	ld hl, .BattleStatWentUpText
 	ld a, [wLoweredStat]
@@ -4486,11 +4486,11 @@ BattleCommand_StatUpMessage:
 	ret
 
 .BattleStatWentWayUpText:
-	text_far _BattleStatWentWayUpText
+	text_start _BattleStatWentWayUpText
 	text_end
 
 .BattleStatWentUpText:
-	text_far _BattleStatWentUpText
+	text_start _BattleStatWentUpText
 	text_end
 
 BattleCommand_StatDownMessage:
@@ -4506,7 +4506,7 @@ BattleCommand_StatDownMessage:
 	jp BattleTextbox
 
 .stat
-	text_far Text_BattleFoeEffectActivate
+	text_start Text_BattleFoeEffectActivate
 	text_asm
 	ld hl, .BattleStatFellText
 	ld a, [wLoweredStat]
@@ -4516,11 +4516,11 @@ BattleCommand_StatDownMessage:
 	ret
 
 .BattleStatSharplyFellText:
-	text_far _BattleStatSharplyFellText
+	text_start _BattleStatSharplyFellText
 	text_end
 
 .BattleStatFellText:
-	text_far _BattleStatFellText
+	text_start _BattleStatFellText
 	text_end
 
 TryLowerStat:
@@ -5550,7 +5550,7 @@ BattleCommand_Charge:
 	jp EndMoveEffect
 
 .UsedText:
-	text_far Text_BattleUser ; "<USER>"
+	text_start Text_BattleUser ; "<USER>"
 	text_asm
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar
@@ -5581,27 +5581,27 @@ BattleCommand_Charge:
 	ret
 
 .BattleMadeWhirlwindText:
-	text_far _BattleMadeWhirlwindText
+	text_start _BattleMadeWhirlwindText
 	text_end
 
 .BattleTookSunlightText:
-	text_far _BattleTookSunlightText
+	text_start _BattleTookSunlightText
 	text_end
 
 .BattleLoweredHeadText:
-	text_far _BattleLoweredHeadText
+	text_start _BattleLoweredHeadText
 	text_end
 
 .BattleGlowingText:
-	text_far _BattleGlowingText
+	text_start _BattleGlowingText
 	text_end
 
 .BattleFlewText:
-	text_far _BattleFlewText
+	text_start _BattleFlewText
 	text_end
 
 .BattleDugText:
-	text_far _BattleDugText
+	text_start _BattleDugText
 	text_end
 
 BattleCommand_Unused3C:

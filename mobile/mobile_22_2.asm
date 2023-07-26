@@ -458,23 +458,23 @@ Function8b555:
 	ret
 
 EnterNewPasscodeText:
-	text_far _EnterNewPasscodeText
+	text_start _EnterNewPasscodeText
 	text_end
 
 ConfirmPasscodeText:
-	text_far _ConfirmPasscodeText
+	text_start _ConfirmPasscodeText
 	text_end
 
 PasscodesNotSameText:
-	text_far _PasscodesNotSameText
+	text_start _PasscodesNotSameText
 	text_end
 
 PasscodeSetText:
-	text_far _PasscodeSetText
+	text_start _PasscodeSetText
 	text_end
 
 FourZerosInvalidText:
-	text_far _FourZerosInvalidText
+	text_start _FourZerosInvalidText
 	text_end
 
 Function8b5e7:
@@ -518,16 +518,16 @@ Function8b5e7:
 	ret
 
 EnterPasscodeText:
-	text_far _EnterPasscodeText
+	text_start _EnterPasscodeText
 	text_end
 
 IncorrectPasscodeText:
-	text_far _IncorrectPasscodeText
+	text_start _IncorrectPasscodeText
 	text_end
 
 UnknownText_0x8b64c:
 	; CARD FOLDER open.@ @
-	text_far _CardFolderOpenText
+	text_start _CardFolderOpenText
 	text_asm
 	ld de, SFX_TWINKLE
 	call PlaySFX

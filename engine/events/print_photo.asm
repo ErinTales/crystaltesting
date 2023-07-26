@@ -30,21 +30,21 @@ PhotoStudio:
 	ret
 
 .WhichMonPhotoText:
-	text_far _WhichMonPhotoText
+	text_start _WhichMonPhotoText
 	text_end
 
 .HoldStillText:
-	text_far _HoldStillText
+	text_start _HoldStillText
 	text_end
 
 .PrestoAllDoneText:
-	text_far _PrestoAllDoneText
+	text_start _PrestoAllDoneText
 	text_end
 
 .NoPhotoText:
-	text_far _NoPhotoText
+	text_start _NoPhotoText
 	text_end
 
 .EggPhotoText:
-	text_far _EggPhotoText
+	text_start _EggPhotoText
 	text_end

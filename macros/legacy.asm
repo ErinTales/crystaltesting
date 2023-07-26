@@ -334,7 +334,7 @@ DEF link_wait_button       EQUS "text_waitbutton"
 DEF text_linkwaitbutton    EQUS "text_waitbutton"
 DEF text_linkpromptbutton  EQUS "text_waitbutton"
 DEF current_day            EQUS "text_today"
-DEF text_jump              EQUS "text_far"
+DEF text_jump              EQUS "text_start"
 
 ; macros/scripts/battle_anims.asm
 DEF anim_enemyfeetobj  EQUS "anim_battlergfx_2row"

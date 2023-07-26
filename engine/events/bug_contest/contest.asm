@@ -33,9 +33,9 @@ BugCatchingContestReturnToGateScript:
 	jumpstd BugContestResultsWarpScript
 
 BugCatchingContestTimeUpText:
-	text_far _BugCatchingContestTimeUpText
+	text_start _BugCatchingContestTimeUpText
 	text_end
 
 BugCatchingContestIsOverText:
-	text_far _BugCatchingContestIsOverText
+	text_start _BugCatchingContestIsOverText
 	text_end

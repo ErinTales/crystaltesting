@@ -380,27 +380,27 @@ DSTChecks:
 	ret
 
 .TimesetAskAdjustDSTText:
-	text_far _TimesetAskAdjustDSTText
+	text_start _TimesetAskAdjustDSTText
 	text_end
 
 .MomLostGearBookletText:
-	text_far _MomLostGearBookletText
+	text_start _MomLostGearBookletText
 	text_end
 
 .TimesetAskDSTText:
-	text_far _TimesetAskDSTText
+	text_start _TimesetAskDSTText
 	text_end
 
 .TimesetDSTText:
-	text_far _TimesetDSTText
+	text_start _TimesetDSTText
 	text_end
 
 .TimesetAskNotDSTText:
-	text_far _TimesetAskNotDSTText
+	text_start _TimesetAskNotDSTText
 	text_end
 
 .TimesetNotDSTText:
-	text_far _TimesetNotDSTText
+	text_start _TimesetNotDSTText
 	text_end
 
 Mom_SetUpWithdrawMenu:
@@ -574,67 +574,67 @@ Mom_WithdrawDepositMenuJoypad:
 	dt 9
 
 MomLeavingText1:
-	text_far _MomLeavingText1
+	text_start _MomLeavingText1
 	text_end
 
 MomLeavingText2:
-	text_far _MomLeavingText2
+	text_start _MomLeavingText2
 	text_end
 
 MomLeavingText3:
-	text_far _MomLeavingText3
+	text_start _MomLeavingText3
 	text_end
 
 MomIsThisAboutYourMoneyText:
-	text_far _MomIsThisAboutYourMoneyText
+	text_start _MomIsThisAboutYourMoneyText
 	text_end
 
 MomBankWhatDoYouWantToDoText:
-	text_far _MomBankWhatDoYouWantToDoText
+	text_start _MomBankWhatDoYouWantToDoText
 	text_end
 
 MomStoreMoneyText:
-	text_far _MomStoreMoneyText
+	text_start _MomStoreMoneyText
 	text_end
 
 MomTakeMoneyText:
-	text_far _MomTakeMoneyText
+	text_start _MomTakeMoneyText
 	text_end
 
 MomSaveMoneyText:
-	text_far _MomSaveMoneyText
+	text_start _MomSaveMoneyText
 	text_end
 
 MomHaventSavedThatMuchText:
-	text_far _MomHaventSavedThatMuchText
+	text_start _MomHaventSavedThatMuchText
 	text_end
 
 MomNotEnoughRoomInWalletText:
-	text_far _MomNotEnoughRoomInWalletText
+	text_start _MomNotEnoughRoomInWalletText
 	text_end
 
 MomInsufficientFundsInWalletText:
-	text_far _MomInsufficientFundsInWalletText
+	text_start _MomInsufficientFundsInWalletText
 	text_end
 
 MomNotEnoughRoomInBankText:
-	text_far _MomNotEnoughRoomInBankText
+	text_start _MomNotEnoughRoomInBankText
 	text_end
 
 MomStartSavingMoneyText:
-	text_far _MomStartSavingMoneyText
+	text_start _MomStartSavingMoneyText
 	text_end
 
 MomStoredMoneyText:
-	text_far _MomStoredMoneyText
+	text_start _MomStoredMoneyText
 	text_end
 
 MomTakenMoneyText:
-	text_far _MomTakenMoneyText
+	text_start _MomTakenMoneyText
 	text_end
 
 MomJustDoWhatYouCanText:
-	text_far _MomJustDoWhatYouCanText
+	text_start _MomJustDoWhatYouCanText
 	text_end
 
 Mom_SavedString:

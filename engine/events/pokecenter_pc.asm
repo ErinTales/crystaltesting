@@ -120,7 +120,7 @@ PC_CheckPartyForPokemon:
 	ret
 
 .PokecenterPCCantUseText:
-	text_far _PokecenterPCCantUseText
+	text_start _PokecenterPCCantUseText
 	text_end
 
 
@@ -225,7 +225,7 @@ _PlayersHousePC:
 	ret
 
 PlayersPCTurnOnText:
-	text_far _PlayersPCTurnOnText
+	text_start _PlayersPCTurnOnText
 	text_end
 
 _PlayersPC:
@@ -322,7 +322,7 @@ PC_DisplayTextWaitMenu:
 	ret
 
 PlayersPCAskWhatDoText:
-	text_far _PlayersPCAskWhatDoText
+	text_start _PlayersPCAskWhatDoText
 	text_end
 
 PlayerWithdrawItemMenu:
@@ -390,15 +390,15 @@ PlayerWithdrawItemMenu:
 	ret
 
 .PlayersPCHowManyWithdrawText:
-	text_far _PlayersPCHowManyWithdrawText
+	text_start _PlayersPCHowManyWithdrawText
 	text_end
 
 .PlayersPCWithdrewItemsText:
-	text_far _PlayersPCWithdrewItemsText
+	text_start _PlayersPCWithdrewItemsText
 	text_end
 
 .PlayersPCNoRoomWithdrawText:
-	text_far _PlayersPCNoRoomWithdrawText
+	text_start _PlayersPCNoRoomWithdrawText
 	text_end
 
 PlayerTossItemMenu:
@@ -460,7 +460,7 @@ PlayerDepositItemMenu:
 	ret
 
 .PlayersPCNoItemsText:
-	text_far _PlayersPCNoItemsText
+	text_start _PlayersPCNoItemsText
 	text_end
 
 .TryDepositItem:
@@ -549,15 +549,15 @@ PlayerDepositItemMenu:
 	ret
 
 .PlayersPCHowManyDepositText:
-	text_far _PlayersPCHowManyDepositText
+	text_start _PlayersPCHowManyDepositText
 	text_end
 
 .PlayersPCDepositItemsText:
-	text_far _PlayersPCDepositItemsText
+	text_start _PlayersPCDepositItemsText
 	text_end
 
 .PlayersPCNoRoomDepositText:
-	text_far _PlayersPCNoRoomDepositText
+	text_start _PlayersPCNoRoomDepositText
 	text_end
 
 PlayerMailBoxMenu:
@@ -655,25 +655,25 @@ PC_DisplayText:
 	ret
 
 PokecenterPCTurnOnText:
-	text_far _PokecenterPCTurnOnText
+	text_start _PokecenterPCTurnOnText
 	text_end
 
 PokecenterPCWhoseText:
-	text_far _PokecenterPCWhoseText
+	text_start _PokecenterPCWhoseText
 	text_end
 
 PokecenterBillsPCText:
-	text_far _PokecenterBillsPCText
+	text_start _PokecenterBillsPCText
 	text_end
 
 PokecenterPlayersPCText:
-	text_far _PokecenterPlayersPCText
+	text_start _PokecenterPlayersPCText
 	text_end
 
 PokecenterOaksPCText:
-	text_far _PokecenterOaksPCText
+	text_start _PokecenterOaksPCText
 	text_end
 
 PokecenterPCOaksClosedText:
-	text_far _PokecenterPCOaksClosedText
+	text_start _PokecenterPCOaksClosedText
 	text_end

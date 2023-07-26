@@ -297,35 +297,35 @@ SeerTexts:
 	dw SeerNoLocationText
 
 SeerSeeAllText:
-	text_far _SeerSeeAllText
+	text_start _SeerSeeAllText
 	text_end
 
 SeerCantTellAThingText:
-	text_far _SeerCantTellAThingText
+	text_start _SeerCantTellAThingText
 	text_end
 
 SeerNameLocationText:
-	text_far _SeerNameLocationText
+	text_start _SeerNameLocationText
 	text_end
 
 SeerTimeLevelText:
-	text_far _SeerTimeLevelText
+	text_start _SeerTimeLevelText
 	text_end
 
 SeerTradeText:
-	text_far _SeerTradeText
+	text_start _SeerTradeText
 	text_end
 
 SeerNoLocationText:
-	text_far _SeerNoLocationText
+	text_start _SeerNoLocationText
 	text_end
 
 SeerEggText:
-	text_far _SeerEggText
+	text_start _SeerEggText
 	text_end
 
 SeerDoNothingText:
-	text_far _SeerDoNothingText
+	text_start _SeerDoNothingText
 	text_end
 
 SeerAdvice:
@@ -364,23 +364,23 @@ SeerAdviceTexts:
 	dbw 255, SeerMoreCareText
 
 SeerMoreCareText:
-	text_far _SeerMoreCareText
+	text_start _SeerMoreCareText
 	text_end
 
 SeerMoreConfidentText:
-	text_far _SeerMoreConfidentText
+	text_start _SeerMoreConfidentText
 	text_end
 
 SeerMuchStrengthText:
-	text_far _SeerMuchStrengthText
+	text_start _SeerMuchStrengthText
 	text_end
 
 SeerMightyText:
-	text_far _SeerMightyText
+	text_start _SeerMightyText
 	text_end
 
 SeerImpressedText:
-	text_far _SeerImpressedText
+	text_start _SeerImpressedText
 	text_end
 
 GetCaughtGender:

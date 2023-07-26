@@ -4,7 +4,7 @@ DisplayUsedMoveText:
 	jp WaitBGMap
 
 UsedMoveText:
-	text_far _ActorNameText
+	text_start _ActorNameText
 	text_asm
 
 	ldh a, [hBattleTurn]
@@ -57,12 +57,12 @@ UsedMoveText:
 	ret
 
 UsedMove1Text:
-	text_far _UsedMove1Text
+	text_start _UsedMove1Text
 	text_asm
 	jr UsedMoveText_CheckObedience
 
 UsedMove2Text:
-	text_far _UsedMove2Text
+	text_start _UsedMove2Text
 	text_asm
 UsedMoveText_CheckObedience:
 ; check obedience
@@ -74,14 +74,14 @@ UsedMoveText_CheckObedience:
 	ret
 
 .UsedInsteadText:
-	text_far _UsedInsteadText
+	text_start _UsedInsteadText
 	text_asm
 .GetMoveNameText:
 	ld hl, MoveNameText
 	ret
 
 MoveNameText:
-	text_far _MoveNameText
+	text_start _MoveNameText
 	text_asm
 ; get start address
 	ld hl, .endusedmovetexts
@@ -114,23 +114,23 @@ MoveNameText:
 	dw EndUsedMove5Text
 
 EndUsedMove1Text:
-	text_far _EndUsedMove1Text
+	text_start _EndUsedMove1Text
 	text_end
 
 EndUsedMove2Text:
-	text_far _EndUsedMove2Text
+	text_start _EndUsedMove2Text
 	text_end
 
 EndUsedMove3Text:
-	text_far _EndUsedMove3Text
+	text_start _EndUsedMove3Text
 	text_end
 
 EndUsedMove4Text:
-	text_far _EndUsedMove4Text
+	text_start _EndUsedMove4Text
 	text_end
 
 EndUsedMove5Text:
-	text_far _EndUsedMove5Text
+	text_start _EndUsedMove5Text
 	text_end
 
 GetMoveGrammar:

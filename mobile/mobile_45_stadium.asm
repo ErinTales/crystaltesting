@@ -800,11 +800,11 @@ YesNo117ccc:
 	next "いいえ@"
 
 MobileStadiumEntryText:
-	text_far _MobileStadiumEntryText
+	text_start _MobileStadiumEntryText
 	text_end
 
 MobileStadiumSuccessText:
-	text_far _MobileStadiumSuccessText
+	text_start _MobileStadiumSuccessText
 	text_end
 
 MobileStudium_JumptableIncrement:

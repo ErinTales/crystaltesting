@@ -97,21 +97,21 @@ GetFruitTreeItem:
 INCLUDE "data/items/fruit_trees.asm"
 
 FruitBearingTreeText:
-	text_far _FruitBearingTreeText
+	text_start _FruitBearingTreeText
 	text_end
 
 HeyItsFruitText:
-	text_far _HeyItsFruitText
+	text_start _HeyItsFruitText
 	text_end
 
 ObtainedFruitText:
-	text_far _ObtainedFruitText
+	text_start _ObtainedFruitText
 	text_end
 
 FruitPackIsFullText:
-	text_far _FruitPackIsFullText
+	text_start _FruitPackIsFullText
 	text_end
 
 NothingHereText:
-	text_far _NothingHereText
+	text_start _NothingHereText
 	text_end

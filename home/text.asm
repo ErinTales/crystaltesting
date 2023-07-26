@@ -143,14 +143,6 @@ PrintText::
 	call SetUpTextbox
 	; fallthrough
 
-BuenaPrintText::
-	push hl
-	hlcoord TEXTBOX_INNERX, TEXTBOX_INNERY
-	lb bc, TEXTBOX_INNERH - 1, TEXTBOX_INNERW
-	call ClearBox
-	pop hl
-	; fallthrough
-
 PrintTextboxText::
 	bccoord TEXTBOX_INNERX, TEXTBOX_INNERY
 	call PlaceHLTextAtBC
@@ -228,7 +220,7 @@ ENDM
 	dict "<TM>",      TMChar
 	dict "<TRAINER>", TrainerChar
 	dict "<KOUGEKI>", PlaceKougeki
-	dict "<LF>",      LineFeedChar
+	dict "<LF>",      NextLineChar
 	dict "<CONT>",    ContText
 	dict "<……>",      SixDotsChar
 	dict "<DONE>",    DoneText
@@ -236,15 +228,22 @@ ENDM
 	dict "<PKMN>",    PlacePKMN
 	dict "<POKE>",    PlacePOKE
 	dict "%",         NextChar
-	dict "¯",         " "
+	cp "¯"
+	jp z, $11dc
+
+	cp $1e
+	jp z, $11ea
+
+	cp $1d
+	jp z, $11e3
+
 	dict "<DEXEND>",  PlaceDexEnd
 	dict "<TARGET>",  PlaceMoveTargetsName
 	dict "<USER>",    PlaceMoveUsersName
 	dict "<ENEMY>",   PlaceEnemysName
 	dict "<PLAY_G>",  PlaceGenderedPlayerName
-	dict "ﾟ",         .place ; should be .diacritic
-	dict "ﾞ",         .place ; should be .diacritic
-	jr .not_diacritic
+	dict "ﾟ", .diacritic
+	dict "ﾞ", .not_diacritic
 
 .diacritic ; unreferenced
 	ld b, a
@@ -319,6 +318,32 @@ PlacePOKE:    print_name PlacePOKEText
 PlaceJPRoute: print_name PlaceJPRouteText
 PlaceWatashi: print_name PlaceWatashiText
 PlaceKokoWa:  print_name PlaceKokoWaText
+Jump_000_11e3:
+	push de
+	ld de, $12b5
+	jp PlaceCommandCharacter
+
+Jump_000_11ea:
+	push de
+	ld de, $12b8
+	jp PlaceCommandCharacter
+
+Jump_000_11f1:
+	push de
+	ld de, $12bb
+	jp PlaceCommandCharacter
+
+
+Jump_000_11f8:
+	push de
+	ld de, $12c2
+	jp PlaceCommandCharacter
+
+
+Jump_000_11ff:
+	push de
+	ld de, $12c6
+	jp PlaceCommandCharacter
 
 PlaceMoveTargetsName::
 	ldh a, [hBattleTurn]
@@ -398,34 +423,32 @@ PlaceCommandCharacter::
 	pop de
 	jp NextChar
 
-TMCharText::      db "TM@"
-TrainerCharText:: db "TRAINER@"
-PCCharText::      db "PC@"
-RocketCharText::  db "ROCKET@"
-PlacePOKeText::   db "POKé@"
+TMCharText::      db "わざマシン@"
+TrainerCharText:: db "トレーナー@"
+PCCharText::      db "パソコン@"
+RocketCharText::  db "ロケットだん@"
+PlacePOKeText::   db "ポケモン@"
 KougekiText::     db "こうげき@"
+TaText::          db "た！@"
 SixDotsCharText:: db "……@"
-EnemyText::       db "Enemy @"
-PlacePKMNText::   db "<PK><MN>@"
-PlacePOKEText::   db "<PO><KE>@"
+EnemyText::       db "てきの @"
+PlacePKMNText::   db "が @"
+PlacePOKEText::   db "はの　@"
 String_Space::    db " @"
 ; These strings have been dummied out.
-PlaceJPRouteText::
-PlaceWatashiText::
-PlaceKokoWaText:: db "@"
-KunSuffixText::   db "@"
-ChanSuffixText::  db "@"
+	db "を　@"
+	db "に　@"
+	db "って@"
+
+PlaceJPRouteText:: db "ばん　どうろ@"
+PlaceWatashiText:: db "わたし@"
+PlaceKokoWaText::  db "ここは　@"
+KunSuffixText::    db "くん@"
+ChanSuffixText::   db "ちゃん@"
 
 NextLineChar::
 	pop hl
 	ld bc, SCREEN_WIDTH * 2
-	add hl, bc
-	push hl
-	jp NextChar
-
-LineFeedChar::
-	pop hl
-	ld bc, SCREEN_WIDTH
 	add hl, bc
 	push hl
 	jp NextChar
@@ -502,8 +525,11 @@ Paragraph::
 
 _ContText::
 	ld a, [wLinkMode]
-	or a
-	jr nz, .communication
+	cp LINK_COLOSSEUM
+	jr z, .communication
+
+	cp LINK_MOBILE
+	jr z, .communication
 	call LoadBlinkingCursor
 
 .communication
@@ -513,9 +539,7 @@ _ContText::
 	call PromptButton
 	pop de
 
-	ld a, [wLinkMode]
-	or a
-	call z, UnloadBlinkingCursor
+	call UnloadBlinkingCursor
 	; fallthrough
 
 _ContTextNoPause::
@@ -626,6 +650,14 @@ Text_WaitBGMap::
 	ret
 
 Diacritic::
+	push af
+	push hl
+	ld a, b
+	ld bc, $ffec
+	add hl, bc
+	ld [hl], a
+	pop hl
+	pop af
 	ret
 
 LoadBlinkingCursor::
@@ -636,19 +668,6 @@ LoadBlinkingCursor::
 UnloadBlinkingCursor::
 	lda_coord 17, 17
 	ldcoord_a 18, 17
-	ret
-
-PlaceFarString::
-	ld b, a
-	ldh a, [hROMBank]
-	push af
-
-	ld a, b
-	rst Bankswitch
-	call PlaceString
-
-	pop af
-	rst Bankswitch
 	ret
 
 PokeFluteTerminator::
@@ -720,7 +739,6 @@ TextCommands::
 	dw TextCommand_SOUND         ; TX_SOUND_SLOT_MACHINE_START
 	dw TextCommand_STRINGBUFFER  ; TX_STRINGBUFFER
 	dw TextCommand_DAY           ; TX_DAY
-	dw TextCommand_FAR           ; TX_FAR
 	assert_table_length NUM_TEXT_CMDS
 
 TextCommand_START::
@@ -746,31 +764,6 @@ TextCommand_RAM::
 	ld l, c
 	call PlaceString
 	pop hl
-	ret
-
-TextCommand_FAR::
-; write text from a different bank (little endian)
-	ldh a, [hROMBank]
-	push af
-
-	ld a, [hli]
-	ld e, a
-	ld a, [hli]
-	ld d, a
-	ld a, [hli]
-
-	ldh [hROMBank], a
-	ld [MBC3RomBank], a
-
-	push hl
-	ld h, d
-	ld l, e
-	call DoTextUntilTerminator
-	pop hl
-
-	pop af
-	ldh [hROMBank], a
-	ld [MBC3RomBank], a
 	ret
 
 TextCommand_BCD::
@@ -1050,11 +1043,11 @@ TextCommand_DAY::
 	dw .Fri
 	dw .Satur
 
-.Sun:    db "SUN@"
-.Mon:    db "MON@"
-.Tues:   db "TUES@"
-.Wednes: db "WEDNES@"
-.Thurs:  db "THURS@"
-.Fri:    db "FRI@"
-.Satur:  db "SATUR@"
-.Day:    db "DAY@"
+.Sun:    db "にち@"
+.Mon:    db "げつ@"
+.Tues:   db "か@"
+.Wednes: db "すい@"
+.Thurs:  db "もく@"
+.Fri:    db "きん@"
+.Satur:  db "ど@"
+.Day:    db "ようび@"

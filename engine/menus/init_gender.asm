@@ -53,7 +53,7 @@ InitGender:
 	db "Girl@"
 
 AreYouABoyOrAreYouAGirlText:
-	text_far _AreYouABoyOrAreYouAGirlText
+	text_start _AreYouABoyOrAreYouAGirlText
 	text_end
 
 InitGenderScreen:

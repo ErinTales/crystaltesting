@@ -72,7 +72,7 @@ CheckMagikarpLength:
 	ret
 
 .MagikarpGuruMeasureText:
-	text_far _MagikarpGuruMeasureText
+	text_start _MagikarpGuruMeasureText
 	text_end
 
 Magikarp_LoadFeetInchesChars:
@@ -310,5 +310,5 @@ MagikarpHouseSign:
 	ret
 
 .KarpGuruRecordText:
-	text_far _KarpGuruRecordText
+	text_start _KarpGuruRecordText
 	text_end

@@ -711,11 +711,11 @@ OakSpeech:
 	ret
 
 OakText1:
-	text_far _OakText1
+	text_start _OakText1
 	text_end
 
 OakText2:
-	text_far _OakText2
+	text_start _OakText2
 	text_asm
 	ld a, WOOPER
 	call PlayMonCry
@@ -724,23 +724,23 @@ OakText2:
 	ret
 
 OakText3:
-	text_far _OakText3
+	text_start _OakText3
 	text_end
 
 OakText4:
-	text_far _OakText4
+	text_start _OakText4
 	text_end
 
 OakText5:
-	text_far _OakText5
+	text_start _OakText5
 	text_end
 
 OakText6:
-	text_far _OakText6
+	text_start _OakText6
 	text_end
 
 OakText7:
-	text_far _OakText7
+	text_start _OakText7
 	text_end
 
 NamePlayer:

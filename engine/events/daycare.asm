@@ -167,7 +167,7 @@ DayCareAskDepositPokemon:
 	ret
 
 .DaycareDummyText: ; unreferenced
-	text_far _DaycareDummyText
+	text_start _DaycareDummyText
 	text_end
 
 DayCare_DepositPokemonText:
@@ -295,83 +295,83 @@ PrintDayCareText:
 	dw .ComeAgainText ; 13
 
 .DayCareManIntroText:
-	text_far _DayCareManIntroText
+	text_start _DayCareManIntroText
 	text_end
 
 .DayCareManIntroEggText:
-	text_far _DayCareManIntroEggText
+	text_start _DayCareManIntroEggText
 	text_end
 
 .DayCareLadyIntroText:
-	text_far _DayCareLadyIntroText
+	text_start _DayCareLadyIntroText
 	text_end
 
 .DayCareLadyIntroEggText:
-	text_far _DayCareLadyIntroEggText
+	text_start _DayCareLadyIntroEggText
 	text_end
 
 .WhatShouldIRaiseText:
-	text_far _WhatShouldIRaiseText
+	text_start _WhatShouldIRaiseText
 	text_end
 
 .OnlyOneMonText:
-	text_far _OnlyOneMonText
+	text_start _OnlyOneMonText
 	text_end
 
 .CantAcceptEggText:
-	text_far _CantAcceptEggText
+	text_start _CantAcceptEggText
 	text_end
 
 .RemoveMailText:
-	text_far _RemoveMailText
+	text_start _RemoveMailText
 	text_end
 
 .LastHealthyMonText:
-	text_far _LastHealthyMonText
+	text_start _LastHealthyMonText
 	text_end
 
 .IllRaiseYourMonText:
-	text_far _IllRaiseYourMonText
+	text_start _IllRaiseYourMonText
 	text_end
 
 .ComeBackLaterText:
-	text_far _ComeBackLaterText
+	text_start _ComeBackLaterText
 	text_end
 
 .AreWeGeniusesText:
-	text_far _AreWeGeniusesText
+	text_start _AreWeGeniusesText
 	text_end
 
 .YourMonHasGrownText:
-	text_far _YourMonHasGrownText
+	text_start _YourMonHasGrownText
 	text_end
 
 .PerfectHeresYourMonText:
-	text_far _PerfectHeresYourMonText
+	text_start _PerfectHeresYourMonText
 	text_end
 
 .GotBackMonText:
-	text_far _GotBackMonText
+	text_start _GotBackMonText
 	text_end
 
 .BackAlreadyText:
-	text_far _BackAlreadyText
+	text_start _BackAlreadyText
 	text_end
 
 .HaveNoRoomText:
-	text_far _HaveNoRoomText
+	text_start _HaveNoRoomText
 	text_end
 
 .NotEnoughMoneyText:
-	text_far _NotEnoughMoneyText
+	text_start _NotEnoughMoneyText
 	text_end
 
 .OhFineThenText:
-	text_far _OhFineThenText
+	text_start _OhFineThenText
 	text_end
 
 .ComeAgainText:
-	text_far _ComeAgainText
+	text_start _ComeAgainText
 	text_end
 
 DayCareManOutside:
@@ -383,7 +383,7 @@ DayCareManOutside:
 	ret
 
 .NotYetText:
-	text_far _NotYetText
+	text_start _NotYetText
 	text_end
 
 .AskGiveEgg:
@@ -424,23 +424,23 @@ DayCareManOutside:
 	ret
 
 .FoundAnEggText:
-	text_far _FoundAnEggText
+	text_start _FoundAnEggText
 	text_end
 
 .ReceivedEggText:
-	text_far _ReceivedEggText
+	text_start _ReceivedEggText
 	text_end
 
 .TakeGoodCareOfEggText:
-	text_far _TakeGoodCareOfEggText
+	text_start _TakeGoodCareOfEggText
 	text_end
 
 .IllKeepItThanksText:
-	text_far _IllKeepItThanksText
+	text_start _IllKeepItThanksText
 	text_end
 
 .NoRoomForEggText:
-	text_far _NoRoomForEggText
+	text_start _NoRoomForEggText
 	text_end
 
 DayCare_GiveEgg:

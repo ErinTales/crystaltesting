@@ -74,7 +74,7 @@ BuenaPrize:
 
 .loop
 	ld hl, .BuenaAskWhichPrizeText
-	call BuenaPrintText
+;	call BuenaPrintText
 
 .okay
 	call DelayFrame
@@ -88,7 +88,7 @@ BuenaPrize:
 	ld [wNamedObjectIndex], a
 	call GetItemName
 	ld hl, .BuenaIsThatRightText
-	call BuenaPrintText
+;	call BuenaPrintText
 	call YesNoBox
 	jr c, .loop
 
@@ -132,7 +132,7 @@ BuenaPrize:
 	ld hl, .BuenaHereYouGoText
 
 .print
-	call BuenaPrintText
+;	call BuenaPrintText
 	jr .loop
 
 .done
@@ -145,27 +145,27 @@ BuenaPrize:
 	ret
 
 .BuenaAskWhichPrizeText:
-	text_far _BuenaAskWhichPrizeText
+	text_start _BuenaAskWhichPrizeText
 	text_end
 
 .BuenaIsThatRightText:
-	text_far _BuenaIsThatRightText
+	text_start _BuenaIsThatRightText
 	text_end
 
 .BuenaHereYouGoText:
-	text_far _BuenaHereYouGoText
+	text_start _BuenaHereYouGoText
 	text_end
 
 .BuenaNotEnoughPointsText:
-	text_far _BuenaNotEnoughPointsText
+	text_start _BuenaNotEnoughPointsText
 	text_end
 
 .BuenaNoRoomText:
-	text_far _BuenaNoRoomText
+	text_start _BuenaNoRoomText
 	text_end
 
 .BuenaComeAgainText:
-	text_far _BuenaComeAgainText
+	text_start _BuenaComeAgainText
 	text_end
 
 Buena_DisplayBlueCardBalance:

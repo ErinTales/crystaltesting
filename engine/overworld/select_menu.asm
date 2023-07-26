@@ -12,7 +12,7 @@ SelectMenu::
 	jp CloseText
 
 MayRegisterItemText:
-	text_far _MayRegisterItemText
+	text_start _MayRegisterItemText
 	text_end
 
 CheckRegisteredItem:

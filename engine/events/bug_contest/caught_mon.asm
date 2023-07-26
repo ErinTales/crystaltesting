@@ -33,5 +33,5 @@ BugContest_SetCaughtContestMon:
 	jp GeneratePartyMonStats
 
 .ContestCaughtMonText:
-	text_far _ContestCaughtMonText
+	text_start _ContestCaughtMonText
 	text_end

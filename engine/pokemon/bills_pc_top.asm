@@ -15,7 +15,7 @@ _BillsPC:
 	ret
 
 .PCGottaHavePokemonText:
-	text_far _PCGottaHavePokemonText
+	text_start _PCGottaHavePokemonText
 	text_end
 
 .LogIn:
@@ -35,7 +35,7 @@ _BillsPC:
 	ret
 
 .PCWhatText:
-	text_far _PCWhatText
+	text_start _PCWhatText
 	text_end
 
 .LogOut:
@@ -127,7 +127,7 @@ BillsPC_MovePKMNMenu:
 	ret
 
 .PCMonHoldingMailText:
-	text_far _PCMonHoldingMailText
+	text_start _PCMonHoldingMailText
 	text_end
 
 BillsPC_DepositMenu:
@@ -161,11 +161,11 @@ BillsPC_Deposit_CheckPartySize: ; unreferenced
 	ret
 
 .PCNoSingleMonText:
-	text_far _PCNoSingleMonText
+	text_start _PCNoSingleMonText
 	text_end
 
 .PCCantDepositLastMonText:
-	text_far _PCCantDepositLastMonText
+	text_start _PCCantDepositLastMonText
 	text_end
 
 CheckCurPartyMonFainted:
@@ -220,7 +220,7 @@ BillsPC_Withdraw_CheckPartySize: ; unreferenced
 	ret
 
 PCCantTakeText:
-	text_far _PCCantTakeText
+	text_start _PCCantTakeText
 	text_end
 
 BillsPC_ChangeBoxMenu:

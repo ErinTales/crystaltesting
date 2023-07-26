@@ -732,7 +732,7 @@ Error_Cant_ExitMenu:
 	jr .infinite_loop
 
 .WindowPoppingErrorText:
-	text_far _WindowPoppingErrorText
+	text_start _WindowPoppingErrorText
 	text_end
 
 _InitVerticalMenuCursor::

@@ -321,11 +321,11 @@ MemoryGame_CheckMatch:
 	ret
 
 MemoryGameYeahText:
-	text_far _MemoryGameYeahText
+	text_start _MemoryGameYeahText
 	text_end
 
 MemoryGameDarnText:
-	text_far _MemoryGameDarnText
+	text_start _MemoryGameDarnText
 	text_end
 
 MemoryGame_InitBoard:

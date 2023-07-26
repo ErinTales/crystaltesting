@@ -28,11 +28,11 @@ FindItemInBallScript::
 	end
 
 .FoundItemText:
-	text_far _FoundItemText
+	text_start _FoundItemText
 	text_end
 
 .CantCarryItemText:
-	text_far _CantCarryItemText
+	text_start _CantCarryItemText
 	text_end
 
 .TryReceiveItem:

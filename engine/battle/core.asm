@@ -7405,7 +7405,7 @@ BoostExp:
 	ret
 
 Text_MonGainedExpPoint:
-	text_far Text_Gained
+	text_start Text_Gained
 	text_asm
 	ld hl, ExpPointsText
 	ld a, [wStringBuffer2 + 2] ; IsTradedMon
@@ -7416,11 +7416,11 @@ Text_MonGainedExpPoint:
 	ret
 
 BoostedExpPointsText:
-	text_far _BoostedExpPointsText
+	text_start _BoostedExpPointsText
 	text_end
 
 ExpPointsText:
-	text_far _ExpPointsText
+	text_start _ExpPointsText
 	text_end
 
 AnimateExpBar:
@@ -7673,29 +7673,29 @@ SendOutMonText:
 	jp BattleTextbox
 
 GoMonText:
-	text_far _GoMonText
+	text_start _GoMonText
 	text_asm
 	jr PrepareBattleMonNicknameText
 
 DoItMonText:
-	text_far _DoItMonText
+	text_start _DoItMonText
 	text_asm
 	jr PrepareBattleMonNicknameText
 
 GoForItMonText:
-	text_far _GoForItMonText
+	text_start _GoForItMonText
 	text_asm
 	jr PrepareBattleMonNicknameText
 
 YourFoesWeakGetmMonText:
-	text_far _YourFoesWeakGetmMonText
+	text_start _YourFoesWeakGetmMonText
 	text_asm
 PrepareBattleMonNicknameText:
 	ld hl, BattleMonNicknameText
 	ret
 
 BattleMonNicknameText:
-	text_far _BattleMonNicknameText
+	text_start _BattleMonNicknameText
 	text_end
 
 WithdrawMonText:
@@ -7703,7 +7703,7 @@ WithdrawMonText:
 	jp BattleTextbox
 
 .WithdrawMonText:
-	text_far _BattleMonNickCommaText
+	text_start _BattleMonNickCommaText
 	text_asm
 ; Depending on the HP lost since the enemy mon was sent out, the game prints a different text
 	push de
@@ -7754,15 +7754,15 @@ WithdrawMonText:
 	ret
 
 ThatsEnoughComeBackText:
-	text_far _ThatsEnoughComeBackText
+	text_start _ThatsEnoughComeBackText
 	text_end
 
 OKComeBackText:
-	text_far _OKComeBackText
+	text_start _OKComeBackText
 	text_end
 
 GoodComeBackText:
-	text_far _GoodComeBackText
+	text_start _GoodComeBackText
 	text_end
 
 TextJump_ComeBack: ; unreferenced
@@ -7770,7 +7770,7 @@ TextJump_ComeBack: ; unreferenced
 	ret
 
 ComeBackText:
-	text_far _ComeBackText
+	text_start _ComeBackText
 	text_end
 
 HandleSafariAngerEatingStatus: ; unreferenced

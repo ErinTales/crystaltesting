@@ -60,35 +60,35 @@ MoveDeletion:
 	ret
 
 .MoveKnowsOneText:
-	text_far _MoveKnowsOneText
+	text_start _MoveKnowsOneText
 	text_end
 
 .AskDeleteMoveText:
-	text_far _AskDeleteMoveText
+	text_start _AskDeleteMoveText
 	text_end
 
 .DeleterForgotMoveText:
-	text_far _DeleterForgotMoveText
+	text_start _DeleterForgotMoveText
 	text_end
 
 .MailEggText:
-	text_far _DeleterEggText
+	text_start _DeleterEggText
 	text_end
 
 .DeleterNoComeAgainText:
-	text_far _DeleterNoComeAgainText
+	text_start _DeleterNoComeAgainText
 	text_end
 
 .DeleterAskWhichMoveText:
-	text_far _DeleterAskWhichMoveText
+	text_start _DeleterAskWhichMoveText
 	text_end
 
 .DeleterIntroText:
-	text_far _DeleterIntroText
+	text_start _DeleterIntroText
 	text_end
 
 .DeleterAskWhichMonText:
-	text_far _DeleterAskWhichMonText
+	text_start _DeleterAskWhichMonText
 	text_end
 
 .DeleteMove:

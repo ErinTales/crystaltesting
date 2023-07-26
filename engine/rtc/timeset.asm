@@ -290,11 +290,11 @@ PrintTwoDigitNumberLeftAlign:
 	ret
 
 OakTimeWokeUpText:
-	text_far _OakTimeWokeUpText
+	text_start _OakTimeWokeUpText
 	text_end
 
 OakTimeWhatTimeIsItText:
-	text_far _OakTimeWhatTimeIsItText
+	text_start _OakTimeWhatTimeIsItText
 	text_end
 
 String_oclock:
@@ -302,7 +302,7 @@ String_oclock:
 
 OakTimeWhatHoursText:
 	; What?@ @
-	text_far _OakTimeWhatHoursText
+	text_start _OakTimeWhatHoursText
 	text_asm
 	hlcoord 1, 16
 	call DisplayHourOClock
@@ -310,11 +310,11 @@ OakTimeWhatHoursText:
 	ret
 
 .OakTimeHoursQuestionMarkText:
-	text_far _OakTimeHoursQuestionMarkText
+	text_start _OakTimeHoursQuestionMarkText
 	text_end
 
 OakTimeHowManyMinutesText:
-	text_far _OakTimeHowManyMinutesText
+	text_start _OakTimeHowManyMinutesText
 	text_end
 
 String_min:
@@ -322,7 +322,7 @@ String_min:
 
 OakTimeWhoaMinutesText:
 	; Whoa!@ @
-	text_far _OakTimeWhoaMinutesText
+	text_start _OakTimeWhoaMinutesText
 	text_asm
 	hlcoord 7, 14
 	call DisplayMinutesWithMinString
@@ -330,7 +330,7 @@ OakTimeWhoaMinutesText:
 	ret
 
 .OakTimeMinutesQuestionMarkText:
-	text_far _OakTimeMinutesQuestionMarkText
+	text_start _OakTimeMinutesQuestionMarkText
 	text_end
 
 OakText_ResponseToSetTime:
@@ -364,15 +364,15 @@ OakText_ResponseToSetTime:
 	ret
 
 .OakTimeOversleptText:
-	text_far _OakTimeOversleptText
+	text_start _OakTimeOversleptText
 	text_end
 
 .OakTimeYikesText:
-	text_far _OakTimeYikesText
+	text_start _OakTimeYikesText
 	text_end
 
 .OakTimeSoDarkText:
-	text_far _OakTimeSoDarkText
+	text_start _OakTimeSoDarkText
 	text_end
 
 TimeSetBackgroundGFX:
@@ -525,7 +525,7 @@ SetDayOfWeek:
 .Saturday:  db "SATURDAY@"
 
 .OakTimeWhatDayIsItText:
-	text_far _OakTimeWhatDayIsItText
+	text_start _OakTimeWhatDayIsItText
 	text_end
 
 .ConfirmWeekdayText:
@@ -536,7 +536,7 @@ SetDayOfWeek:
 	ret
 
 .OakTimeIsItText:
-	text_far _OakTimeIsItText
+	text_start _OakTimeIsItText
 	text_end
 
 InitialSetDSTFlag:
@@ -563,7 +563,7 @@ InitialSetDSTFlag:
 	ret
 
 .DSTIsThatOKText:
-	text_far _DSTIsThatOKText
+	text_start _DSTIsThatOKText
 	text_end
 
 InitialClearDSTFlag:
@@ -590,7 +590,7 @@ InitialClearDSTFlag:
 	ret
 
 .TimeAskOkayText:
-	text_far _TimeAskOkayText
+	text_start _TimeAskOkayText
 	text_end
 
 MrChrono: ; unreferenced

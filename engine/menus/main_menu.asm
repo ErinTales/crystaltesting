@@ -329,7 +329,7 @@ MainMenu_PrintCurrentTimeAndDay:
 	db "TIME NOT SET@"
 
 .MainMenuTimeUnknownText: ; unreferenced
-	text_far _MainMenuTimeUnknownText
+	text_start _MainMenuTimeUnknownText
 	text_end
 
 .PrintDayOfWeek:

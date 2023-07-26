@@ -2636,19 +2636,19 @@ Function8a0ff:
 	jp Function89e36
 
 MobileCardFolderIntro1Text:
-	text_far _MobileCardFolderIntro1Text
+	text_start _MobileCardFolderIntro1Text
 	text_end
 
 MobileCardFolderIntro2Text:
-	text_far _MobileCardFolderIntro2Text
+	text_start _MobileCardFolderIntro2Text
 	text_end
 
 MobileCardFolderIntro3Text:
-	text_far _MobileCardFolderIntro3Text
+	text_start _MobileCardFolderIntro3Text
 	text_end
 
 MobileCardFolderIntro4Text:
-	text_far _MobileCardFolderIntro4Text
+	text_start _MobileCardFolderIntro4Text
 	text_end
 
 Function8a116:
@@ -2776,15 +2776,15 @@ Function8a20d:
 	ret
 
 MobileCardFolderAskDeleteText:
-	text_far _MobileCardFolderAskDeleteText
+	text_start _MobileCardFolderAskDeleteText
 	text_end
 
 MobileCardFolderDeleteAreYouSureText:
-	text_far _MobileCardFolderDeleteAreYouSureText
+	text_start _MobileCardFolderDeleteAreYouSureText
 	text_end
 
 MobileCardFolderDeletedText:
-	text_far _MobileCardFolderDeletedText
+	text_start _MobileCardFolderDeletedText
 	text_end
 
 Function8a241:
@@ -2868,11 +2868,11 @@ MenuHeader_0x8a2ef:
 	menu_coords 0, 12, SCREEN_WIDTH - 1, SCREEN_HEIGHT - 1
 
 MobileCardFolderAskOpenOldText:
-	text_far _MobileCardFolderAskOpenOldText
+	text_start _MobileCardFolderAskOpenOldText
 	text_end
 
 MobileCardFolderAskDeleteOldText:
-	text_far _MobileCardFolderAskDeleteOldText
+	text_start _MobileCardFolderAskDeleteOldText
 	text_end
 
 Function8a2fe:
@@ -4144,7 +4144,7 @@ Function8ac7c:
 	ret
 
 MobileCardFolderFinishRegisteringCardsText:
-	text_far _MobileCardFolderFinishRegisteringCardsText
+	text_start _MobileCardFolderFinishRegisteringCardsText
 	text_end
 
 Function8ad0b:

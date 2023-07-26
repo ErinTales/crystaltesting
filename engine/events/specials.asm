@@ -167,7 +167,7 @@ GetMysteryGiftItem:
 	ret
 
 .ReceiveItemText:
-	text_far _ReceiveItemText
+	text_start _ReceiveItemText
 	text_end
 
 BugContestJudging:
@@ -254,11 +254,11 @@ CheckCoinsAndCoinCase:
 	ret
 
 .NoCoinsText:
-	text_far _NoCoinsText
+	text_start _NoCoinsText
 	text_end
 
 .NoCoinCaseText:
-	text_far _NoCoinCaseText
+	text_start _NoCoinCaseText
 	text_end
 
 ClearBGPalettesBufferScreen:

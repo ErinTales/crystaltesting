@@ -4824,15 +4824,15 @@ Function1021b8:
 	ret
 
 NewCardArrivedText:
-	text_far _NewCardArrivedText
+	text_start _NewCardArrivedText
 	text_end
 
 PutCardInCardFolderText:
-	text_far _PutCardInCardFolderText
+	text_start _PutCardInCardFolderText
 	text_end
 
 CardWasListedText:
-	text_far _CardWasListedText
+	text_start _CardWasListedText
 	text_end
 
 Function1021e0:
@@ -4842,15 +4842,15 @@ Function1021e0:
 	ret
 
 StartingLinkText: ; unreferenced
-	text_far _StartingLinkText
+	text_start _StartingLinkText
 	text_end
 
 LinkTerminatedText:
-	text_far _LinkTerminatedText
+	text_start _LinkTerminatedText
 	text_end
 
 ClosingLinkText:
-	text_far _ClosingLinkText
+	text_start _ClosingLinkText
 	text_end
 
 Function1021f9:
@@ -6599,7 +6599,7 @@ Function102ea8:
 	ret
 
 TradingMonForOTMonText:
-	text_far _TradingMonForOTMonText
+	text_start _TradingMonForOTMonText
 	text_end
 
 Function102ee7:
@@ -7499,31 +7499,31 @@ MenuData_10374f:
 	db "せつめい@"
 
 MobileBattleMustPickThreeMonText:
-	text_far _MobileBattleMustPickThreeMonText
+	text_start _MobileBattleMustPickThreeMonText
 	text_end
 
 MobileBattleMoreInfoText:
-	text_far _MobileBattleMoreInfoText
+	text_start _MobileBattleMoreInfoText
 	text_end
 
 MobileBattleRulesText:
-	text_far _MobileBattleRulesText
+	text_start _MobileBattleRulesText
 	text_end
 
 WouldYouLikeToMobileBattleText:
-	text_far _WouldYouLikeToMobileBattleText
+	text_start _WouldYouLikeToMobileBattleText
 	text_end
 
 WantAQuickMobileBattleText:
-	text_far _WantAQuickMobileBattleText
+	text_start _WantAQuickMobileBattleText
 	text_end
 
 WantToRushThroughAMobileBattleText:
-	text_far _WantToRushThroughAMobileBattleText
+	text_start _WantToRushThroughAMobileBattleText
 	text_end
 
 PleaseTryAgainTomorrowText:
-	text_far _PleaseTryAgainTomorrowText
+	text_start _PleaseTryAgainTomorrowText
 	text_end
 
 Function103780:
@@ -7587,7 +7587,7 @@ Function1037c2:
 	ret
 
 TryAgainUsingSameSettingsText:
-	text_far _TryAgainUsingSameSettingsText
+	text_start _TryAgainUsingSameSettingsText
 	text_end
 
 Function1037eb:
@@ -7617,11 +7617,11 @@ Function1037eb:
 	ret
 
 MobileBattleLessThanOneMinuteLeftText:
-	text_far _MobileBattleLessThanOneMinuteLeftText
+	text_start _MobileBattleLessThanOneMinuteLeftText
 	text_end
 
 MobileBattleNoTimeLeftForLinkingText:
-	text_far _MobileBattleNoTimeLeftForLinkingText
+	text_start _MobileBattleNoTimeLeftForLinkingText
 	text_end
 
 MobileCheckRemainingBattleTime:
@@ -7670,7 +7670,7 @@ Function10383c:
 	ret
 
 PickThreeMonForMobileBattleText:
-	text_far _PickThreeMonForMobileBattleText
+	text_start _PickThreeMonForMobileBattleText
 	text_end
 
 Function10387b:
@@ -7686,5 +7686,5 @@ Function10387b:
 	ret
 
 MobileBattleRemainingTimeText:
-	text_far _MobileBattleRemainingTimeText
+	text_start _MobileBattleRemainingTimeText
 	text_end

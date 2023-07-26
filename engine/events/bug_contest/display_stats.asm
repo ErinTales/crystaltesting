@@ -87,7 +87,7 @@ DisplayCaughtContestMonStats:
 	db " THIS <PKMN>  @"
 
 ContestAskSwitchText:
-	text_far _ContestAskSwitchText
+	text_start _ContestAskSwitchText
 	text_end
 
 DisplayAlreadyCaughtText:
@@ -96,7 +96,7 @@ DisplayAlreadyCaughtText:
 	jp PrintText
 
 .ContestAlreadyCaughtText:
-	text_far _ContestAlreadyCaughtText
+	text_start _ContestAlreadyCaughtText
 	text_end
 
 DummyPredef2F:

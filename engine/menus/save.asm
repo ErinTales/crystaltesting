@@ -1100,33 +1100,33 @@ Checksum:
 	ret
 
 WouldYouLikeToSaveTheGameText:
-	text_far _WouldYouLikeToSaveTheGameText
+	text_start _WouldYouLikeToSaveTheGameText
 	text_end
 
 SavingDontTurnOffThePowerText:
-	text_far _SavingDontTurnOffThePowerText
+	text_start _SavingDontTurnOffThePowerText
 	text_end
 
 SavedTheGameText:
-	text_far _SavedTheGameText
+	text_start _SavedTheGameText
 	text_end
 
 AlreadyASaveFileText:
-	text_far _AlreadyASaveFileText
+	text_start _AlreadyASaveFileText
 	text_end
 
 AnotherSaveFileText:
-	text_far _AnotherSaveFileText
+	text_start _AnotherSaveFileText
 	text_end
 
 SaveFileCorruptedText:
-	text_far _SaveFileCorruptedText
+	text_start _SaveFileCorruptedText
 	text_end
 
 ChangeBoxSaveText:
-	text_far _ChangeBoxSaveText
+	text_start _ChangeBoxSaveText
 	text_end
 
 MoveMonWOMailSaveText:
-	text_far _MoveMonWOMailSaveText
+	text_start _MoveMonWOMailSaveText
 	text_end

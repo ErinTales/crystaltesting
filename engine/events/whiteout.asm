@@ -25,7 +25,7 @@ Script_Whiteout:
 	jumpstd BugContestResultsWarpScript
 
 .WhitedOutText:
-	text_far _WhitedOutText
+	text_start _WhitedOutText
 	text_end
 
 OverworldBGMap:

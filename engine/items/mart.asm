@@ -583,11 +583,11 @@ RooftopSaleAskPurchaseQuantity:
 	ret
 
 MartHowManyText:
-	text_far _MartHowManyText
+	text_start _MartHowManyText
 	text_end
 
 MartFinalPriceText:
-	text_far _MartFinalPriceText
+	text_start _MartFinalPriceText
 	text_end
 
 MenuHeader_Buy:
@@ -624,87 +624,87 @@ MenuHeader_Buy:
 	ret
 
 HerbShopLadyIntroText:
-	text_far _HerbShopLadyIntroText
+	text_start _HerbShopLadyIntroText
 	text_end
 
 HerbalLadyHowManyText:
-	text_far _HerbalLadyHowManyText
+	text_start _HerbalLadyHowManyText
 	text_end
 
 HerbalLadyFinalPriceText:
-	text_far _HerbalLadyFinalPriceText
+	text_start _HerbalLadyFinalPriceText
 	text_end
 
 HerbalLadyThanksText:
-	text_far _HerbalLadyThanksText
+	text_start _HerbalLadyThanksText
 	text_end
 
 HerbalLadyPackFullText:
-	text_far _HerbalLadyPackFullText
+	text_start _HerbalLadyPackFullText
 	text_end
 
 HerbalLadyNoMoneyText:
-	text_far _HerbalLadyNoMoneyText
+	text_start _HerbalLadyNoMoneyText
 	text_end
 
 HerbalLadyComeAgainText:
-	text_far _HerbalLadyComeAgainText
+	text_start _HerbalLadyComeAgainText
 	text_end
 
 BargainShopIntroText:
-	text_far _BargainShopIntroText
+	text_start _BargainShopIntroText
 	text_end
 
 BargainShopFinalPriceText:
-	text_far _BargainShopFinalPriceText
+	text_start _BargainShopFinalPriceText
 	text_end
 
 BargainShopThanksText:
-	text_far _BargainShopThanksText
+	text_start _BargainShopThanksText
 	text_end
 
 BargainShopPackFullText:
-	text_far _BargainShopPackFullText
+	text_start _BargainShopPackFullText
 	text_end
 
 BargainShopSoldOutText:
-	text_far _BargainShopSoldOutText
+	text_start _BargainShopSoldOutText
 	text_end
 
 BargainShopNoFundsText:
-	text_far _BargainShopNoFundsText
+	text_start _BargainShopNoFundsText
 	text_end
 
 BargainShopComeAgainText:
-	text_far _BargainShopComeAgainText
+	text_start _BargainShopComeAgainText
 	text_end
 
 PharmacyIntroText:
-	text_far _PharmacyIntroText
+	text_start _PharmacyIntroText
 	text_end
 
 PharmacyHowManyText:
-	text_far _PharmacyHowManyText
+	text_start _PharmacyHowManyText
 	text_end
 
 PharmacyFinalPriceText:
-	text_far _PharmacyFinalPriceText
+	text_start _PharmacyFinalPriceText
 	text_end
 
 PharmacyThanksText:
-	text_far _PharmacyThanksText
+	text_start _PharmacyThanksText
 	text_end
 
 PharmacyPackFullText:
-	text_far _PharmacyPackFullText
+	text_start _PharmacyPackFullText
 	text_end
 
 PharmacyNoMoneyText:
-	text_far _PharmacyNoMoneyText
+	text_start _PharmacyNoMoneyText
 	text_end
 
 PharmacyComeAgainText:
-	text_far _PharmacyComeAgainText
+	text_start _PharmacyComeAgainText
 	text_end
 
 SellMenu:
@@ -730,7 +730,7 @@ SellMenu:
 	ret
 
 .NothingToSellText:
-	text_far _NothingToSellText
+	text_start _NothingToSellText
 	text_end
 
 .TryToSellItem:
@@ -798,18 +798,18 @@ SellMenu:
 	ret
 
 MartSellHowManyText:
-	text_far _MartSellHowManyText
+	text_start _MartSellHowManyText
 	text_end
 
 MartSellPriceText:
-	text_far _MartSellPriceText
+	text_start _MartSellPriceText
 	text_end
 
 UnusedDummyString: ; unreferenced
 	db "！ダミー！@" ; "!Dummy!"
 
 MartWelcomeText:
-	text_far _MartWelcomeText
+	text_start _MartWelcomeText
 	text_end
 
 MenuHeader_BuySell:
@@ -826,31 +826,31 @@ MenuHeader_BuySell:
 	db "QUIT@"
 
 MartThanksText:
-	text_far _MartThanksText
+	text_start _MartThanksText
 	text_end
 
 MartNoMoneyText:
-	text_far _MartNoMoneyText
+	text_start _MartNoMoneyText
 	text_end
 
 MartPackFullText:
-	text_far _MartPackFullText
+	text_start _MartPackFullText
 	text_end
 
 MartCantBuyText:
-	text_far _MartCantBuyText
+	text_start _MartCantBuyText
 	text_end
 
 MartComeAgainText:
-	text_far _MartComeAgainText
+	text_start _MartComeAgainText
 	text_end
 
 MartAskMoreText:
-	text_far _MartAskMoreText
+	text_start _MartAskMoreText
 	text_end
 
 MartBoughtText:
-	text_far _MartBoughtText
+	text_start _MartBoughtText
 	text_end
 
 PlayTransactionSound:

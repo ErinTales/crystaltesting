@@ -1550,15 +1550,15 @@ Function108bec:
 	ret
 
 .MobilePlayerWillTradeMonText:
-	text_far _MobilePlayerWillTradeMonText
+	text_start _MobilePlayerWillTradeMonText
 	text_end
 
 .MobileForPartnersMonText:
-	text_far _MobileForPartnersMonText
+	text_start _MobileForPartnersMonText
 	text_end
 
 .MobilePlayersMonTradeText: ; unreferenced
-	text_far _MobilePlayersMonTradeText
+	text_start _MobilePlayersMonTradeText
 	text_end
 
 Function108c16:
@@ -1571,7 +1571,7 @@ Function108c16:
 	ret
 
 .MobileTakeGoodCareOfMonText:
-	text_far _MobileTakeGoodCareOfMonText
+	text_start _MobileTakeGoodCareOfMonText
 	text_end
 
 Function108c2b:
@@ -1584,7 +1584,7 @@ Function108c2b:
 	ret
 
 .MobilePlayersMonTrade2Text:
-	text_far _MobilePlayersMonTrade2Text
+	text_start _MobilePlayersMonTrade2Text
 	text_end
 
 Function108c40:
@@ -1607,11 +1607,11 @@ Function108c40:
 	ret
 
 .MobileTakeGoodCareOfText:
-	text_far _MobileTakeGoodCareOfText
+	text_start _MobileTakeGoodCareOfText
 	text_end
 
 .MobileTradeCameBackText:
-	text_far _MobileTradeCameBackText
+	text_start _MobileTradeCameBackText
 	text_end
 
 Function108c6d:

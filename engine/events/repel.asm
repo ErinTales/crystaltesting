@@ -6,5 +6,5 @@ RepelWoreOffScript::
 	end
 
 .RepelWoreOffText:
-	text_far _RepelWoreOffText
+	text_start _RepelWoreOffText
 	text_end

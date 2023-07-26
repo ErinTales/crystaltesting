@@ -4,7 +4,7 @@ Kurt_PrintTextWhichApricorn:
 	ret
 
 .WhichApricornText:
-	text_far _WhichApricornText
+	text_start _WhichApricornText
 	text_end
 
 Kurt_PrintTextHowMany:
@@ -13,7 +13,7 @@ Kurt_PrintTextHowMany:
 	ret
 
 .HowManyShouldIMakeText:
-	text_far _HowManyShouldIMakeText
+	text_start _HowManyShouldIMakeText
 	text_end
 
 SelectApricornForKurt:

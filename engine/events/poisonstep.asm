@@ -146,9 +146,9 @@ DoPoisonStep::
 	ret
 
 .PoisonFaintText:
-	text_far _PoisonFaintText
+	text_start _PoisonFaintText
 	text_end
 
 .PoisonWhiteoutText: ; unreferenced
-	text_far _PoisonWhiteoutText
+	text_start _PoisonWhiteoutText
 	text_end

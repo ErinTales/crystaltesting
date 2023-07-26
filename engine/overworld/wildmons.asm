@@ -836,7 +836,7 @@ RandomUnseenWildMon:
 	ret
 
 .JustSawSomeRareMonText:
-	text_far _JustSawSomeRareMonText
+	text_start _JustSawSomeRareMonText
 	text_end
 
 RandomPhoneWildMon:

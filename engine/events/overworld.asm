@@ -58,7 +58,7 @@ CheckBadge:
 	ret
 
 .BadgeRequiredText:
-	text_far _BadgeRequiredText
+	text_start _BadgeRequiredText
 	text_end
 
 CheckPartyMove:
@@ -111,7 +111,7 @@ FieldMoveFailed:
 	ret
 
 .CantUseItemText:
-	text_far _CantUseItemText
+	text_start _CantUseItemText
 	text_end
 
 CutFunction:
@@ -159,11 +159,11 @@ CutFunction:
 	ret
 
 UseCutText:
-	text_far _UseCutText
+	text_start _UseCutText
 	text_end
 
 CutNothingText:
-	text_far _CutNothingText
+	text_start _CutNothingText
 	text_end
 
 CheckMapForSomethingToCut:
@@ -315,7 +315,7 @@ Script_UseFlash:
 	end
 
 UseFlashTextScript:
-	text_far _BlindingFlashText
+	text_start _BlindingFlashText
 	text_asm
 	call WaitSFX
 	ld de, SFX_FLASH
@@ -422,15 +422,15 @@ UsedSurfScript:
 	ret
 
 UsedSurfText:
-	text_far _UsedSurfText
+	text_start _UsedSurfText
 	text_end
 
 CantSurfText:
-	text_far _CantSurfText
+	text_start _CantSurfText
 	text_end
 
 AlreadySurfingText:
-	text_far _AlreadySurfingText
+	text_start _AlreadySurfingText
 	text_end
 
 GetSurfType:
@@ -538,7 +538,7 @@ AskSurfScript:
 	end
 
 AskSurfText:
-	text_far _AskSurfText
+	text_start _AskSurfText
 	text_end
 
 FlyFunction:
@@ -699,7 +699,7 @@ Script_UsedWaterfall:
 	step_end
 
 .UseWaterfallText:
-	text_far _UseWaterfallText
+	text_start _UseWaterfallText
 	text_end
 
 TryWaterfallOW::
@@ -728,7 +728,7 @@ Script_CantDoWaterfall:
 	jumptext .HugeWaterfallText
 
 .HugeWaterfallText:
-	text_far _HugeWaterfallText
+	text_start _HugeWaterfallText
 	text_end
 
 Script_AskWaterfall:
@@ -740,7 +740,7 @@ Script_AskWaterfall:
 	end
 
 .AskWaterfallText:
-	text_far _AskWaterfallText
+	text_start _AskWaterfallText
 	text_end
 
 EscapeRopeFunction:
@@ -826,15 +826,15 @@ EscapeRopeOrDig:
 	ret
 
 .UseDigText:
-	text_far _UseDigText
+	text_start _UseDigText
 	text_end
 
 .UseEscapeRopeText:
-	text_far _UseEscapeRopeText
+	text_start _UseEscapeRopeText
 	text_end
 
 .CantUseDigText:
-	text_far _CantUseDigText
+	text_start _CantUseDigText
 	text_end
 
 .UsedEscapeRopeScript:
@@ -922,11 +922,11 @@ TeleportFunction:
 	ret
 
 .TeleportReturnText:
-	text_far _TeleportReturnText
+	text_start _TeleportReturnText
 	text_end
 
 .CantUseTeleportText:
-	text_far _CantUseTeleportText
+	text_start _CantUseTeleportText
 	text_end
 
 .TeleportScript:
@@ -973,7 +973,7 @@ StrengthFunction:
 	ret
 
 .AlreadyUsingStrengthText:
-	text_far _AlreadyUsingStrengthText
+	text_start _AlreadyUsingStrengthText
 	text_end
 
 .Failed:
@@ -1014,11 +1014,11 @@ Script_UsedStrength:
 	end
 
 .UseStrengthText:
-	text_far _UseStrengthText
+	text_start _UseStrengthText
 	text_end
 
 .MoveBoulderText:
-	text_far _MoveBoulderText
+	text_start _MoveBoulderText
 	text_end
 
 AskStrengthScript:
@@ -1042,15 +1042,15 @@ AskStrengthScript:
 	end
 
 AskStrengthText:
-	text_far _AskStrengthText
+	text_start _AskStrengthText
 	text_end
 
 BouldersMoveText:
-	text_far _BouldersMoveText
+	text_start _BouldersMoveText
 	text_end
 
 BouldersMayMoveText:
-	text_far _BouldersMayMoveText
+	text_start _BouldersMayMoveText
 	text_end
 
 TryStrengthOW:
@@ -1125,7 +1125,7 @@ WhirlpoolFunction:
 	ret
 
 UseWhirlpoolText:
-	text_far _UseWhirlpoolText
+	text_start _UseWhirlpoolText
 	text_end
 
 TryWhirlpoolMenu:
@@ -1213,7 +1213,7 @@ Script_MightyWhirlpool:
 	jumptext .MayPassWhirlpoolText
 
 .MayPassWhirlpoolText:
-	text_far _MayPassWhirlpoolText
+	text_start _MayPassWhirlpoolText
 	text_end
 
 Script_AskWhirlpoolOW:
@@ -1225,7 +1225,7 @@ Script_AskWhirlpoolOW:
 	end
 
 AskWhirlpoolText:
-	text_far _AskWhirlpoolText
+	text_start _AskWhirlpoolText
 	text_end
 
 HeadbuttFunction:
@@ -1250,11 +1250,11 @@ TryHeadbuttFromMenu:
 	ret
 
 UseHeadbuttText:
-	text_far _UseHeadbuttText
+	text_start _UseHeadbuttText
 	text_end
 
 HeadbuttNothingText:
-	text_far _HeadbuttNothingText
+	text_start _HeadbuttNothingText
 	text_end
 
 HeadbuttFromMenuScript:
@@ -1306,7 +1306,7 @@ AskHeadbuttScript:
 	end
 
 AskHeadbuttText:
-	text_far _AskHeadbuttText
+	text_start _AskHeadbuttText
 	text_end
 
 RockSmashFunction:
@@ -1382,7 +1382,7 @@ MovementData_RockSmash:
 	step_end
 
 UseRockSmashText:
-	text_far _UseRockSmashText
+	text_start _UseRockSmashText
 	text_end
 
 AskRockSmashScript:
@@ -1399,11 +1399,11 @@ AskRockSmashScript:
 	jumptext MaySmashText
 
 MaySmashText:
-	text_far _MaySmashText
+	text_start _MaySmashText
 	text_end
 
 AskRockSmashText:
-	text_far _AskRockSmashText
+	text_start _AskRockSmashText
 	text_end
 
 HasRockSmash:
@@ -1606,15 +1606,15 @@ PutTheRodAway:
 	ret
 
 RodBiteText:
-	text_far _RodBiteText
+	text_start _RodBiteText
 	text_end
 
 RodNothingText:
-	text_far _RodNothingText
+	text_start _RodNothingText
 	text_end
 
 UnusedNothingHereText: ; unreferenced
-	text_far _UnusedNothingHereText
+	text_start _UnusedNothingHereText
 	text_end
 
 BikeFunction:
@@ -1747,15 +1747,15 @@ Script_CantGetOffBike:
 	end
 
 .CantGetOffBikeText:
-	text_far _CantGetOffBikeText
+	text_start _CantGetOffBikeText
 	text_end
 
 GotOnBikeText:
-	text_far _GotOnBikeText
+	text_start _GotOnBikeText
 	text_end
 
 GotOffBikeText:
-	text_far _GotOffBikeText
+	text_start _GotOffBikeText
 	text_end
 
 TryCutOW::
@@ -1801,12 +1801,12 @@ AskCutScript:
 	ret
 
 AskCutText:
-	text_far _AskCutText
+	text_start _AskCutText
 	text_end
 
 CantCutScript:
 	jumptext CanCutText
 
 CanCutText:
-	text_far _CanCutText
+	text_start _CanCutText
 	text_end

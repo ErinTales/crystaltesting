@@ -42,9 +42,9 @@ ItemFinder:
 	end
 
 .ItemfinderItemNearbyText:
-	text_far _ItemfinderItemNearbyText
+	text_start _ItemfinderItemNearbyText
 	text_end
 
 .ItemfinderNopeText:
-	text_far _ItemfinderNopeText
+	text_start _ItemfinderNopeText
 	text_end

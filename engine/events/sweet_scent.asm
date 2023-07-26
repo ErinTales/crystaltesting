@@ -58,9 +58,9 @@ SweetScentEncounter:
 	ret
 
 UseSweetScentText:
-	text_far _UseSweetScentText
+	text_start _UseSweetScentText
 	text_end
 
 SweetScentNothingText:
-	text_far _SweetScentNothingText
+	text_start _SweetScentNothingText
 	text_end

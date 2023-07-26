@@ -310,7 +310,7 @@ _PlayerMailBoxMenu:
 	jp MenuTextboxBackup
 
 .EmptyMailboxText:
-	text_far _EmptyMailboxText
+	text_start _EmptyMailboxText
 	text_end
 
 InitMail:
@@ -455,15 +455,15 @@ MailboxPC:
 	jp MenuTextboxBackup
 
 .MailClearedPutAwayText:
-	text_far _MailClearedPutAwayText
+	text_start _MailClearedPutAwayText
 	text_end
 
 .MailPackFullText:
-	text_far _MailPackFullText
+	text_start _MailPackFullText
 	text_end
 
 .MailMessageLostText:
-	text_far _MailMessageLostText
+	text_start _MailMessageLostText
 	text_end
 
 .GetMailType:
@@ -523,15 +523,15 @@ MailboxPC:
 	jp CloseSubmenu
 
 .MailAlreadyHoldingItemText:
-	text_far _MailAlreadyHoldingItemText
+	text_start _MailAlreadyHoldingItemText
 	text_end
 
 .MailEggText:
-	text_far _MailEggText
+	text_start _MailEggText
 	text_end
 
 .MailMovedFromBoxText:
-	text_far _MailMovedFromBoxText
+	text_start _MailMovedFromBoxText
 	text_end
 
 .Cancel:

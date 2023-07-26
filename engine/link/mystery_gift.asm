@@ -169,35 +169,35 @@ endc
 	db   "@"
 
 .MysteryGiftCanceledText:
-	text_far _MysteryGiftCanceledText
+	text_start _MysteryGiftCanceledText
 	text_end
 
 .MysteryGiftCommErrorText:
-	text_far _MysteryGiftCommErrorText
+	text_start _MysteryGiftCommErrorText
 	text_end
 
 .RetrieveMysteryGiftText:
-	text_far _RetrieveMysteryGiftText
+	text_start _RetrieveMysteryGiftText
 	text_end
 
 .YourFriendIsNotReadyText:
-	text_far _YourFriendIsNotReadyText
+	text_start _YourFriendIsNotReadyText
 	text_end
 
 .MysteryGiftFiveADayText:
-	text_far _MysteryGiftFiveADayText
+	text_start _MysteryGiftFiveADayText
 	text_end
 
 .MysteryGiftOneADayText:
-	text_far _MysteryGiftOneADayText
+	text_start _MysteryGiftOneADayText
 	text_end
 
 .MysteryGiftSentText:
-	text_far _MysteryGiftSentText
+	text_start _MysteryGiftSentText
 	text_end
 
 .MysteryGiftSentHomeText:
-	text_far _MysteryGiftSentHomeText
+	text_start _MysteryGiftSentHomeText
 	text_end
 
 .CheckAlreadyGotFiveGiftsToday:
@@ -1700,23 +1700,23 @@ endr
 	db   "@"
 
 .NameCardReceivedCardText:
-	text_far _NameCardReceivedCardText
+	text_start _NameCardReceivedCardText
 	text_end
 
 .NameCardListedCardText:
-	text_far _NameCardListedCardText
+	text_start _NameCardListedCardText
 	text_end
 
 .NameCardNotRegisteredCardText:
-	text_far _NameCardNotRegisteredCardText
+	text_start _NameCardNotRegisteredCardText
 	text_end
 
 .NameCardLinkCancelledText:
-	text_far _NameCardLinkCancelledText
+	text_start _NameCardLinkCancelledText
 	text_end
 
 .NameCardCommErrorText:
-	text_far _NameCardLinkCommErrorText
+	text_start _NameCardLinkCommErrorText
 	text_end
 
 .ClearScreen:

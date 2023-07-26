@@ -425,7 +425,7 @@ StartMenu_Quit:
 	ret
 
 .StartMenuContestEndText:
-	text_far _StartMenuContestEndText
+	text_start _StartMenuContestEndText
 	text_end
 
 StartMenu_Save:

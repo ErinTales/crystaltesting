@@ -574,7 +574,7 @@ PlacePrinterStatusString:
 	ld d, [hl]
 	hlcoord 1, 7
 	ld a, BANK(GBPrinterStrings)
-	call PlaceFarString
+;	call PlaceFarString
 	hlcoord 2, 15
 	ld de, String_PressBToCancel
 	call PlaceString
@@ -607,7 +607,7 @@ PlacePrinterStatusStringBorderless: ; unreferenced
 	ld d, [hl]
 	hlcoord 4, 7
 	ld a, BANK(GBPrinterStrings)
-	call PlaceFarString
+;	call PlaceFarString
 	hlcoord 4, 15
 	ld de, String_PressBToCancel
 	call PlaceString

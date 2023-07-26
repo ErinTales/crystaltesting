@@ -167,19 +167,19 @@ TeachTMHM:
 	ret
 
 BootedTMText:
-	text_far _BootedTMText
+	text_start _BootedTMText
 	text_end
 
 BootedHMText:
-	text_far _BootedHMText
+	text_start _BootedHMText
 	text_end
 
 ContainedMoveText:
-	text_far _ContainedMoveText
+	text_start _ContainedMoveText
 	text_end
 
 TMHMNotCompatibleText:
-	text_far _TMHMNotCompatibleText
+	text_start _TMHMNotCompatibleText
 	text_end
 
 TMHM_PocketLoop:
@@ -495,11 +495,11 @@ VerboseReceiveTMHM: ; unreferenced
 	jp PrintText
 
 .NoRoomTMHMText:
-	text_far _NoRoomTMHMText
+	text_start _NoRoomTMHMText
 	text_end
 
 .ReceivedTMHMText:
-	text_far _ReceivedTMHMText
+	text_start _ReceivedTMHMText
 	text_end
 
 .CheckHaveRoomForTMHM:

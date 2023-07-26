@@ -717,7 +717,7 @@ AI_Switch:
 	ret
 
 EnemyWithdrewText:
-	text_far _EnemyWithdrewText
+	text_start _EnemyWithdrewText
 	text_end
 
 EnemyUsedFullHealRed: ; unreferenced
@@ -841,5 +841,5 @@ PrintText_UsedItemOn:
 	jp PrintText
 
 EnemyUsedOnText:
-	text_far _EnemyUsedOnText
+	text_start _EnemyUsedOnText
 	text_end

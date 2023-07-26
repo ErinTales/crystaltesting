@@ -64,5 +64,5 @@ SacredAshScript:
 	end
 
 .UseSacredAshText:
-	text_far _UseSacredAshText
+	text_start _UseSacredAshText
 	text_end

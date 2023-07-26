@@ -356,7 +356,7 @@ HatchEggs:
 
 .Text_HatchEgg:
 	; Huh? @ @
-	text_far Text_BreedHuh
+	text_start Text_BreedHuh
 	text_asm
 	ld hl, wVramState
 	res 0, [hl]
@@ -377,15 +377,15 @@ HatchEggs:
 	ret
 
 .BreedClearboxText:
-	text_far _BreedClearboxText
+	text_start _BreedClearboxText
 	text_end
 
 .BreedEggHatchText:
-	text_far _BreedEggHatchText
+	text_start _BreedEggHatchText
 	text_end
 
 .BreedAskNicknameText:
-	text_far _BreedAskNicknameText
+	text_start _BreedAskNicknameText
 	text_end
 
 InitEggMoves:
@@ -892,11 +892,11 @@ DayCareMonCursor:
 	jp WaitPressAorB_BlinkCursor
 
 LeftWithDayCareLadyText:
-	text_far _LeftWithDayCareLadyText
+	text_start _LeftWithDayCareLadyText
 	text_end
 
 LeftWithDayCareManText:
-	text_far _LeftWithDayCareManText
+	text_start _LeftWithDayCareManText
 	text_end
 
 DayCareMonCompatibilityText:
@@ -925,23 +925,23 @@ DayCareMonCompatibilityText:
 	ret
 
 .BreedBrimmingWithEnergyText:
-	text_far _BreedBrimmingWithEnergyText
+	text_start _BreedBrimmingWithEnergyText
 	text_end
 
 .BreedNoInterestText:
-	text_far _BreedNoInterestText
+	text_start _BreedNoInterestText
 	text_end
 
 .BreedAppearsToCareForText:
-	text_far _BreedAppearsToCareForText
+	text_start _BreedAppearsToCareForText
 	text_end
 
 .BreedFriendlyText:
-	text_far _BreedFriendlyText
+	text_start _BreedFriendlyText
 	text_end
 
 .BreedShowsInterestText:
-	text_far _BreedShowsInterestText
+	text_start _BreedShowsInterestText
 	text_end
 
 DayCareMonPrintEmptyString: ; unreferenced

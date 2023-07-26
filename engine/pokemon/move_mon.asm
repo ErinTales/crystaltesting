@@ -1802,7 +1802,7 @@ GivePoke::
 	ret
 
 WasSentToBillsPCText:
-	text_far _WasSentToBillsPCText
+	text_start _WasSentToBillsPCText
 	text_end
 
 InitNickname:

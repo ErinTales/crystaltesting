@@ -19,7 +19,7 @@ _DeleteSaveData:
 	ret
 
 .ClearAllSaveDataText:
-	text_far _ClearAllSaveDataText
+	text_start _ClearAllSaveDataText
 	text_end
 
 .NoYesMenuHeader:

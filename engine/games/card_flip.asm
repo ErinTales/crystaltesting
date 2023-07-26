@@ -108,7 +108,7 @@ _CardFlip:
 	ret
 
 .CardFlipPlayWithThreeCoinsText:
-	text_far _CardFlipPlayWithThreeCoinsText
+	text_start _CardFlipPlayWithThreeCoinsText
 	text_end
 
 .DeductCoins:
@@ -147,7 +147,7 @@ _CardFlip:
 	ret
 
 .CardFlipNotEnoughCoinsText:
-	text_far _CardFlipNotEnoughCoinsText
+	text_start _CardFlipNotEnoughCoinsText
 	text_end
 
 .ChooseACard:
@@ -223,7 +223,7 @@ _CardFlip:
 	ret
 
 .CardFlipChooseACardText:
-	text_far _CardFlipChooseACardText
+	text_start _CardFlipChooseACardText
 	text_end
 
 .PlaceYourBet:
@@ -244,7 +244,7 @@ _CardFlip:
 	ret
 
 .CardFlipPlaceYourBetText:
-	text_far _CardFlipPlaceYourBetText
+	text_start _CardFlipPlaceYourBetText
 	text_end
 
 .CheckTheCard:
@@ -314,11 +314,11 @@ _CardFlip:
 	ret
 
 .CardFlipPlayAgainText:
-	text_far _CardFlipPlayAgainText
+	text_start _CardFlipPlayAgainText
 	text_end
 
 .CardFlipShuffledText:
-	text_far _CardFlipShuffledText
+	text_start _CardFlipShuffledText
 	text_end
 
 .Quit:
@@ -1101,11 +1101,11 @@ CardFlip_CheckWinCondition:
 	ret
 
 .CardFlipYeahText:
-	text_far _CardFlipYeahText
+	text_start _CardFlipYeahText
 	text_end
 
 .CardFlipDarnText:
-	text_far _CardFlipDarnText
+	text_start _CardFlipDarnText
 	text_end
 
 .AddCoinPlaySFX:

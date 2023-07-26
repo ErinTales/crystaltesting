@@ -395,19 +395,19 @@ IsMonHoldingEverstone:
 	ret
 
 CongratulationsYourPokemonText:
-	text_far _CongratulationsYourPokemonText
+	text_start _CongratulationsYourPokemonText
 	text_end
 
 EvolvedIntoText:
-	text_far _EvolvedIntoText
+	text_start _EvolvedIntoText
 	text_end
 
 StoppedEvolvingText:
-	text_far _StoppedEvolvingText
+	text_start _StoppedEvolvingText
 	text_end
 
 EvolvingText:
-	text_far _EvolvingText
+	text_start _EvolvingText
 	text_end
 
 LearnLevelMoves:

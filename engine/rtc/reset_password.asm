@@ -32,15 +32,15 @@ _ResetClock:
 	ret
 
 .PasswordAskResetText:
-	text_far _PasswordAskResetText
+	text_start _PasswordAskResetText
 	text_end
 
 .PasswordWrongText:
-	text_far _PasswordWrongText
+	text_start _PasswordWrongText
 	text_end
 
 .PasswordAskResetClockText:
-	text_far _PasswordAskResetClockText
+	text_start _PasswordAskResetClockText
 	text_end
 
 .NoYes_MenuHeader:
@@ -99,7 +99,7 @@ ClockResetPassword:
 	ret
 
 .PasswordAskEnterText:
-	text_far _PasswordAskEnterText
+	text_start _PasswordAskEnterText
 	text_end
 
 .updateIDdisplay

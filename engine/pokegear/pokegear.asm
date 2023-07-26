@@ -525,7 +525,7 @@ Pokegear_UpdateClock:
 	db "ごご@"
 
 .GearTodayText:
-	text_far _GearTodayText
+	text_start _GearTodayText
 	text_end
 
 PokegearMap_CheckRegion:
@@ -928,11 +928,11 @@ PokegearPhone_MakePhoneCall:
 	ret
 
 .GearEllipseText:
-	text_far _GearEllipseText
+	text_start _GearEllipseText
 	text_end
 
 .GearOutOfServiceText:
-	text_far _GearOutOfServiceText
+	text_start _GearOutOfServiceText
 	text_end
 
 PokegearPhone_FinishPhoneCall:
@@ -1339,15 +1339,15 @@ Pokegear_LoadTilemapRLE:
 	jr .loop
 
 PokegearAskWhoCallText:
-	text_far _PokegearAskWhoCallText
+	text_start _PokegearAskWhoCallText
 	text_end
 
 PokegearPressButtonText:
-	text_far _PokegearPressButtonText
+	text_start _PokegearPressButtonText
 	text_end
 
 PokegearAskDeleteText:
-	text_far _PokegearAskDeleteText
+	text_start _PokegearAskDeleteText
 	text_end
 
 PokegearSpritesGFX:

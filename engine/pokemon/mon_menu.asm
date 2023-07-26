@@ -62,15 +62,15 @@ TossItemFromPC:
 	ret
 
 .ItemsTossOutHowManyText:
-	text_far _ItemsTossOutHowManyText
+	text_start _ItemsTossOutHowManyText
 	text_end
 
 .ItemsThrowAwayText:
-	text_far _ItemsThrowAwayText
+	text_start _ItemsThrowAwayText
 	text_end
 
 .ItemsDiscardedText:
-	text_far _ItemsDiscardedText
+	text_start _ItemsDiscardedText
 	text_end
 
 .CantToss:
@@ -79,7 +79,7 @@ TossItemFromPC:
 	ret
 
 .ItemsTooImportantText:
-	text_far _ItemsTooImportantText
+	text_start _ItemsTooImportantText
 	text_end
 
 CantUseItem:
@@ -88,7 +88,7 @@ CantUseItem:
 	ret
 
 ItemsOakWarningText:
-	text_far _ItemsOakWarningText
+	text_start _ItemsOakWarningText
 	text_end
 
 PartyMonItemName:
@@ -387,35 +387,35 @@ GiveTakeItemMenuData:
 	db "TAKE@"
 
 PokemonSwapItemText:
-	text_far _PokemonSwapItemText
+	text_start _PokemonSwapItemText
 	text_end
 
 PokemonHoldItemText:
-	text_far _PokemonHoldItemText
+	text_start _PokemonHoldItemText
 	text_end
 
 PokemonRemoveMailText:
-	text_far _PokemonRemoveMailText
+	text_start _PokemonRemoveMailText
 	text_end
 
 PokemonNotHoldingText:
-	text_far _PokemonNotHoldingText
+	text_start _PokemonNotHoldingText
 	text_end
 
 ItemStorageFullText:
-	text_far _ItemStorageFullText
+	text_start _ItemStorageFullText
 	text_end
 
 PokemonTookItemText:
-	text_far _PokemonTookItemText
+	text_start _PokemonTookItemText
 	text_end
 
 PokemonAskSwapItemText:
-	text_far _PokemonAskSwapItemText
+	text_start _PokemonAskSwapItemText
 	text_end
 
 ItemCantHeldText:
-	text_far _ItemCantHeldText
+	text_start _ItemCantHeldText
 	text_end
 
 GetPartyItemLocation:
@@ -557,27 +557,27 @@ MonMailAction:
 	db "QUIT@"
 
 .MailLoseMessageText:
-	text_far _MailLoseMessageText
+	text_start _MailLoseMessageText
 	text_end
 
 .MailDetachedText:
-	text_far _MailDetachedText
+	text_start _MailDetachedText
 	text_end
 
 .MailNoSpaceText:
-	text_far _MailNoSpaceText
+	text_start _MailNoSpaceText
 	text_end
 
 .MailAskSendToPCText:
-	text_far _MailAskSendToPCText
+	text_start _MailAskSendToPCText
 	text_end
 
 .MailboxFullText:
-	text_far _MailboxFullText
+	text_start _MailboxFullText
 	text_end
 
 .MailSentToPCText:
-	text_far _MailSentToPCText
+	text_start _MailSentToPCText
 	text_end
 
 OpenPartyStats:
@@ -738,7 +738,7 @@ MonMenu_Softboiled_MilkDrink:
 	ret
 
 .PokemonNotEnoughHPText:
-	text_far _PokemonNotEnoughHPText
+	text_start _PokemonNotEnoughHPText
 	text_end
 
 .CheckMonHasEnoughHP:

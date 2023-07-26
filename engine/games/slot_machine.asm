@@ -1763,15 +1763,15 @@ Slots_AskBet:
 	ret
 
 .SlotsBetHowManyCoinsText:
-	text_far _SlotsBetHowManyCoinsText
+	text_start _SlotsBetHowManyCoinsText
 	text_end
 
 .SlotsStartText:
-	text_far _SlotsStartText
+	text_start _SlotsStartText
 	text_end
 
 .SlotsNotEnoughCoinsText:
-	text_far _SlotsNotEnoughCoinsText
+	text_start _SlotsNotEnoughCoinsText
 	text_end
 
 .MenuHeader:
@@ -1817,11 +1817,11 @@ Slots_AskPlayAgain:
 	ret
 
 .SlotsRanOutOfCoinsText:
-	text_far _SlotsRanOutOfCoinsText
+	text_start _SlotsRanOutOfCoinsText
 	text_end
 
 .SlotsPlayAgainText:
-	text_far _SlotsPlayAgainText
+	text_start _SlotsPlayAgainText
 	text_end
 
 Slots_GetPayout:
@@ -1922,11 +1922,11 @@ endr
 	ret
 
 .SlotsLinedUpText:
-	text_far _SlotsLinedUpText
+	text_start _SlotsLinedUpText
 	text_end
 
 .SlotsDarnText:
-	text_far _SlotsDarnText
+	text_start _SlotsDarnText
 	text_end
 
 .LinedUpSevens:

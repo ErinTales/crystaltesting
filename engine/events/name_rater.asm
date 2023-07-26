@@ -179,41 +179,41 @@ GetNicknamenameLength:
 	ret
 
 NameRaterHelloText:
-	text_far _NameRaterHelloText
+	text_start _NameRaterHelloText
 	text_end
 
 NameRaterWhichMonText:
-	text_far _NameRaterWhichMonText
+	text_start _NameRaterWhichMonText
 	text_end
 
 NameRaterBetterNameText:
-	text_far _NameRaterBetterNameText
+	text_start _NameRaterBetterNameText
 	text_end
 
 NameRaterWhatNameText:
-	text_far _NameRaterWhatNameText
+	text_start _NameRaterWhatNameText
 	text_end
 
 NameRaterFinishedText:
-	text_far _NameRaterFinishedText
+	text_start _NameRaterFinishedText
 	text_end
 
 NameRaterComeAgainText:
-	text_far _NameRaterComeAgainText
+	text_start _NameRaterComeAgainText
 	text_end
 
 NameRaterPerfectNameText:
-	text_far _NameRaterPerfectNameText
+	text_start _NameRaterPerfectNameText
 	text_end
 
 NameRaterEggText:
-	text_far _NameRaterEggText
+	text_start _NameRaterEggText
 	text_end
 
 NameRaterSameNameText:
-	text_far _NameRaterSameNameText
+	text_start _NameRaterSameNameText
 	text_end
 
 NameRaterNamedText:
-	text_far _NameRaterNamedText
+	text_start _NameRaterNamedText
 	text_end

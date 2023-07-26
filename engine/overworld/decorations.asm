@@ -390,7 +390,7 @@ PopulateDecoCategoryMenu:
 	ret
 
 .NothingToChooseText:
-	text_far _NothingToChooseText
+	text_start _NothingToChooseText
 	text_end
 
 .NonscrollingMenuHeader:
@@ -815,7 +815,7 @@ DecoAction_SetItUp_Ornament:
 	ret
 
 WhichSidePutOnText:
-	text_far _WhichSidePutOnText
+	text_start _WhichSidePutOnText
 	text_end
 
 DecoAction_PutItAway_Ornament:
@@ -840,7 +840,7 @@ DecoAction_PutItAway_Ornament:
 	ret
 
 WhichSidePutAwayText:
-	text_far _WhichSidePutAwayText
+	text_start _WhichSidePutAwayText
 	text_end
 
 DecoAction_AskWhichSide:
@@ -893,23 +893,23 @@ DecoSideMenuHeader:
 	db "CANCEL@"
 
 PutAwayTheDecoText:
-	text_far _PutAwayTheDecoText
+	text_start _PutAwayTheDecoText
 	text_end
 
 NothingToPutAwayText:
-	text_far _NothingToPutAwayText
+	text_start _NothingToPutAwayText
 	text_end
 
 SetUpTheDecoText:
-	text_far _SetUpTheDecoText
+	text_start _SetUpTheDecoText
 	text_end
 
 PutAwayAndSetUpText:
-	text_far _PutAwayAndSetUpText
+	text_start _PutAwayAndSetUpText
 	text_end
 
 AlreadySetUpText:
-	text_far _AlreadySetUpText
+	text_start _AlreadySetUpText
 	text_end
 
 GetDecorationName_c_de:
@@ -1018,28 +1018,28 @@ DecorationDesc_TownMapPoster:
 	end
 
 .LookTownMapText:
-	text_far _LookTownMapText
+	text_start _LookTownMapText
 	text_end
 
 DecorationDesc_PikachuPoster:
 	jumptext .LookPikachuPosterText
 
 .LookPikachuPosterText:
-	text_far _LookPikachuPosterText
+	text_start _LookPikachuPosterText
 	text_end
 
 DecorationDesc_ClefairyPoster:
 	jumptext .LookClefairyPosterText
 
 .LookClefairyPosterText:
-	text_far _LookClefairyPosterText
+	text_start _LookClefairyPosterText
 	text_end
 
 DecorationDesc_JigglypuffPoster:
 	jumptext .LookJigglypuffPosterText
 
 .LookJigglypuffPosterText:
-	text_far _LookJigglypuffPosterText
+	text_start _LookJigglypuffPosterText
 	text_end
 
 DecorationDesc_NullPoster:
@@ -1069,7 +1069,7 @@ DecorationDesc_OrnamentOrConsole:
 	jumptext .LookAdorableDecoText
 
 .LookAdorableDecoText:
-	text_far _LookAdorableDecoText
+	text_start _LookAdorableDecoText
 	text_end
 
 DecorationDesc_GiantOrnament:
@@ -1081,7 +1081,7 @@ DecorationDesc_GiantOrnament:
 	jumptext .LookGiantDecoText
 
 .LookGiantDecoText:
-	text_far _LookGiantDecoText
+	text_start _LookGiantDecoText
 	text_end
 
 ToggleMaptileDecorations:

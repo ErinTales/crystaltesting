@@ -153,29 +153,6 @@ UpdateBattleHuds::
 
 INCLUDE "home/battle_vars.asm"
 
-FarCopyRadioText::
-	inc hl
-	ldh a, [hROMBank]
-	push af
-	ld a, [hli]
-	ld e, a
-	ld a, [hli]
-	ld d, a
-	ld a, [hli]
-	ldh [hROMBank], a
-	ld [MBC3RomBank], a
-	ld a, e
-	ld l, a
-	ld a, d
-	ld h, a
-	ld de, wRadioText
-	ld bc, 2 * SCREEN_WIDTH
-	call CopyBytes
-	pop af
-	ldh [hROMBank], a
-	ld [MBC3RomBank], a
-	ret
-
 MobileTextBorder::
 	; For mobile link battles only.
 	ld a, [wLinkMode]

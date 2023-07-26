@@ -296,27 +296,27 @@ OaksPKMNTalk6:
 	jp NextRadioLine
 
 OPT_IntroText1:
-	text_far _OPT_IntroText1
+	text_start _OPT_IntroText1
 	text_end
 
 OPT_IntroText2:
-	text_far _OPT_IntroText2
+	text_start _OPT_IntroText2
 	text_end
 
 OPT_IntroText3:
-	text_far _OPT_IntroText3
+	text_start _OPT_IntroText3
 	text_end
 
 OPT_OakText1:
-	text_far _OPT_OakText1
+	text_start _OPT_OakText1
 	text_end
 
 OPT_OakText2:
-	text_far _OPT_OakText2
+	text_start _OPT_OakText2
 	text_end
 
 OPT_OakText3:
-	text_far _OPT_OakText3
+	text_start _OPT_OakText3
 	text_end
 
 OaksPKMNTalk7:
@@ -328,7 +328,7 @@ OaksPKMNTalk7:
 	jp NextRadioLine
 
 OPT_MaryText1:
-	text_far _OPT_MaryText1
+	text_start _OPT_MaryText1
 	text_end
 
 OaksPKMNTalk8:
@@ -369,67 +369,67 @@ OaksPKMNTalk8:
 	assert_table_length NUM_OAKS_POKEMON_TALK_ADVERBS
 
 .OPT_SweetAdorablyText:
-	text_far _OPT_SweetAdorablyText
+	text_start _OPT_SweetAdorablyText
 	text_end
 
 .OPT_WigglySlicklyText:
-	text_far _OPT_WigglySlicklyText
+	text_start _OPT_WigglySlicklyText
 	text_end
 
 .OPT_AptlyNamedText:
-	text_far _OPT_AptlyNamedText
+	text_start _OPT_AptlyNamedText
 	text_end
 
 .OPT_UndeniablyKindOfText:
-	text_far _OPT_UndeniablyKindOfText
+	text_start _OPT_UndeniablyKindOfText
 	text_end
 
 .OPT_UnbearablyText:
-	text_far _OPT_UnbearablyText
+	text_start _OPT_UnbearablyText
 	text_end
 
 .OPT_WowImpressivelyText:
-	text_far _OPT_WowImpressivelyText
+	text_start _OPT_WowImpressivelyText
 	text_end
 
 .OPT_AlmostPoisonouslyText:
-	text_far _OPT_AlmostPoisonouslyText
+	text_start _OPT_AlmostPoisonouslyText
 	text_end
 
 .OPT_SensuallyText:
-	text_far _OPT_SensuallyText
+	text_start _OPT_SensuallyText
 	text_end
 
 .OPT_MischievouslyText:
-	text_far _OPT_MischievouslyText
+	text_start _OPT_MischievouslyText
 	text_end
 
 .OPT_TopicallyText:
-	text_far _OPT_TopicallyText
+	text_start _OPT_TopicallyText
 	text_end
 
 .OPT_AddictivelyText:
-	text_far _OPT_AddictivelyText
+	text_start _OPT_AddictivelyText
 	text_end
 
 .OPT_LooksInWaterText:
-	text_far _OPT_LooksInWaterText
+	text_start _OPT_LooksInWaterText
 	text_end
 
 .OPT_EvolutionMustBeText:
-	text_far _OPT_EvolutionMustBeText
+	text_start _OPT_EvolutionMustBeText
 	text_end
 
 .OPT_ProvocativelyText:
-	text_far _OPT_ProvocativelyText
+	text_start _OPT_ProvocativelyText
 	text_end
 
 .OPT_FlippedOutText:
-	text_far _OPT_FlippedOutText
+	text_start _OPT_FlippedOutText
 	text_end
 
 .OPT_HeartMeltinglyText:
-	text_far _OPT_HeartMeltinglyText
+	text_start _OPT_HeartMeltinglyText
 	text_end
 
 OaksPKMNTalk9:
@@ -478,67 +478,67 @@ OaksPKMNTalk9:
 	assert_table_length NUM_OAKS_POKEMON_TALK_ADJECTIVES
 
 .OPT_CuteText:
-	text_far _OPT_CuteText
+	text_start _OPT_CuteText
 	text_end
 
 .OPT_WeirdText:
-	text_far _OPT_WeirdText
+	text_start _OPT_WeirdText
 	text_end
 
 .OPT_PleasantText:
-	text_far _OPT_PleasantText
+	text_start _OPT_PleasantText
 	text_end
 
 .OPT_BoldSortOfText:
-	text_far _OPT_BoldSortOfText
+	text_start _OPT_BoldSortOfText
 	text_end
 
 .OPT_FrighteningText:
-	text_far _OPT_FrighteningText
+	text_start _OPT_FrighteningText
 	text_end
 
 .OPT_SuaveDebonairText:
-	text_far _OPT_SuaveDebonairText
+	text_start _OPT_SuaveDebonairText
 	text_end
 
 .OPT_PowerfulText:
-	text_far _OPT_PowerfulText
+	text_start _OPT_PowerfulText
 	text_end
 
 .OPT_ExcitingText:
-	text_far _OPT_ExcitingText
+	text_start _OPT_ExcitingText
 	text_end
 
 .OPT_GroovyText:
-	text_far _OPT_GroovyText
+	text_start _OPT_GroovyText
 	text_end
 
 .OPT_InspiringText:
-	text_far _OPT_InspiringText
+	text_start _OPT_InspiringText
 	text_end
 
 .OPT_FriendlyText:
-	text_far _OPT_FriendlyText
+	text_start _OPT_FriendlyText
 	text_end
 
 .OPT_HotHotHotText:
-	text_far _OPT_HotHotHotText
+	text_start _OPT_HotHotHotText
 	text_end
 
 .OPT_StimulatingText:
-	text_far _OPT_StimulatingText
+	text_start _OPT_StimulatingText
 	text_end
 
 .OPT_GuardedText:
-	text_far _OPT_GuardedText
+	text_start _OPT_GuardedText
 	text_end
 
 .OPT_LovelyText:
-	text_far _OPT_LovelyText
+	text_start _OPT_LovelyText
 	text_end
 
 .OPT_SpeedyText:
-	text_far _OPT_SpeedyText
+	text_start _OPT_SpeedyText
 	text_end
 
 OaksPKMNTalk10:
@@ -555,7 +555,7 @@ OaksPKMNTalk10:
 	ret
 
 OPT_PokemonChannelText:
-	text_far _OPT_PokemonChannelText
+	text_start _OPT_PokemonChannelText
 	text_end
 
 OPT_RestartText:
@@ -804,7 +804,7 @@ CopyDexEntryPart2:
 	ret
 
 PokedexShowText:
-	text_far _PokedexShowText
+	text_start _PokedexShowText
 	text_end
 
 BenMonMusic1:
@@ -875,43 +875,43 @@ StartPokemonMusicChannel:
 	ret
 
 BenIntroText1:
-	text_far _BenIntroText1
+	text_start _BenIntroText1
 	text_end
 
 BenIntroText2:
-	text_far _BenIntroText2
+	text_start _BenIntroText2
 	text_end
 
 BenIntroText3:
-	text_far _BenIntroText3
+	text_start _BenIntroText3
 	text_end
 
 FernIntroText1:
-	text_far _FernIntroText1
+	text_start _FernIntroText1
 	text_end
 
 FernIntroText2:
-	text_far _FernIntroText2
+	text_start _FernIntroText2
 	text_end
 
 BenFernText1:
-	text_far _BenFernText1
+	text_start _BenFernText1
 	text_end
 
 BenFernText2A:
-	text_far _BenFernText2A
+	text_start _BenFernText2A
 	text_end
 
 BenFernText2B:
-	text_far _BenFernText2B
+	text_start _BenFernText2B
 	text_end
 
 BenFernText3A:
-	text_far _BenFernText3A
+	text_start _BenFernText3A
 	text_end
 
 BenFernText3B:
-	text_far _BenFernText3B
+	text_start _BenFernText3B
 	text_end
 
 LuckyNumberShow1:
@@ -1006,55 +1006,55 @@ LuckyNumberShow15:
 	jp NextRadioLine
 
 LC_Text1:
-	text_far _LC_Text1
+	text_start _LC_Text1
 	text_end
 
 LC_Text2:
-	text_far _LC_Text2
+	text_start _LC_Text2
 	text_end
 
 LC_Text3:
-	text_far _LC_Text3
+	text_start _LC_Text3
 	text_end
 
 LC_Text4:
-	text_far _LC_Text4
+	text_start _LC_Text4
 	text_end
 
 LC_Text5:
-	text_far _LC_Text5
+	text_start _LC_Text5
 	text_end
 
 LC_Text6:
-	text_far _LC_Text6
+	text_start _LC_Text6
 	text_end
 
 LC_Text7:
-	text_far _LC_Text7
+	text_start _LC_Text7
 	text_end
 
 LC_Text8:
-	text_far _LC_Text8
+	text_start _LC_Text8
 	text_end
 
 LC_Text9:
-	text_far _LC_Text9
+	text_start _LC_Text9
 	text_end
 
 LC_Text10:
-	text_far _LC_Text10
+	text_start _LC_Text10
 	text_end
 
 LC_Text11:
-	text_far _LC_Text11
+	text_start _LC_Text11
 	text_end
 
 LC_DragText1:
-	text_far _LC_DragText1
+	text_start _LC_DragText1
 	text_end
 
 LC_DragText2:
-	text_far _LC_DragText2
+	text_start _LC_DragText2
 	text_end
 
 PeoplePlaces1:
@@ -1079,15 +1079,15 @@ PeoplePlaces3:
 	jp NextRadioLine
 
 PnP_Text1:
-	text_far _PnP_Text1
+	text_start _PnP_Text1
 	text_end
 
 PnP_Text2:
-	text_far _PnP_Text2
+	text_start _PnP_Text2
 	text_end
 
 PnP_Text3:
-	text_far _PnP_Text3
+	text_start _PnP_Text3
 	text_end
 
 PeoplePlaces4: ; People
@@ -1128,7 +1128,7 @@ PeoplePlaces4: ; People
 INCLUDE "data/radio/pnp_hidden_people.asm"
 
 PnP_Text4:
-	text_far _PnP_Text4
+	text_start _PnP_Text4
 	text_end
 
 PeoplePlaces5:
@@ -1178,67 +1178,67 @@ PeoplePlaces5:
 	assert_table_length NUM_PNP_PEOPLE_ADJECTIVES
 
 PnP_CuteText:
-	text_far _PnP_CuteText
+	text_start _PnP_CuteText
 	text_end
 
 PnP_LazyText:
-	text_far _PnP_LazyText
+	text_start _PnP_LazyText
 	text_end
 
 PnP_HappyText:
-	text_far _PnP_HappyText
+	text_start _PnP_HappyText
 	text_end
 
 PnP_NoisyText:
-	text_far _PnP_NoisyText
+	text_start _PnP_NoisyText
 	text_end
 
 PnP_PrecociousText:
-	text_far _PnP_PrecociousText
+	text_start _PnP_PrecociousText
 	text_end
 
 PnP_BoldText:
-	text_far _PnP_BoldText
+	text_start _PnP_BoldText
 	text_end
 
 PnP_PickyText:
-	text_far _PnP_PickyText
+	text_start _PnP_PickyText
 	text_end
 
 PnP_SortOfOKText:
-	text_far _PnP_SortOfOKText
+	text_start _PnP_SortOfOKText
 	text_end
 
 PnP_SoSoText:
-	text_far _PnP_SoSoText
+	text_start _PnP_SoSoText
 	text_end
 
 PnP_GreatText:
-	text_far _PnP_GreatText
+	text_start _PnP_GreatText
 	text_end
 
 PnP_MyTypeText:
-	text_far _PnP_MyTypeText
+	text_start _PnP_MyTypeText
 	text_end
 
 PnP_CoolText:
-	text_far _PnP_CoolText
+	text_start _PnP_CoolText
 	text_end
 
 PnP_InspiringText:
-	text_far _PnP_InspiringText
+	text_start _PnP_InspiringText
 	text_end
 
 PnP_WeirdText:
-	text_far _PnP_WeirdText
+	text_start _PnP_WeirdText
 	text_end
 
 PnP_RightForMeText:
-	text_far _PnP_RightForMeText
+	text_start _PnP_RightForMeText
 	text_end
 
 PnP_OddText:
-	text_far _PnP_OddText
+	text_start _PnP_OddText
 	text_end
 
 PeoplePlaces6: ; Places
@@ -1263,7 +1263,7 @@ PeoplePlaces6: ; Places
 INCLUDE "data/radio/pnp_places.asm"
 
 PnP_Text5:
-	text_far _PnP_Text5
+	text_start _PnP_Text5
 	text_end
 
 PeoplePlaces7:
@@ -1365,43 +1365,43 @@ RocketRadio10:
 	jp NextRadioLine
 
 RocketRadioText1:
-	text_far _RocketRadioText1
+	text_start _RocketRadioText1
 	text_end
 
 RocketRadioText2:
-	text_far _RocketRadioText2
+	text_start _RocketRadioText2
 	text_end
 
 RocketRadioText3:
-	text_far _RocketRadioText3
+	text_start _RocketRadioText3
 	text_end
 
 RocketRadioText4:
-	text_far _RocketRadioText4
+	text_start _RocketRadioText4
 	text_end
 
 RocketRadioText5:
-	text_far _RocketRadioText5
+	text_start _RocketRadioText5
 	text_end
 
 RocketRadioText6:
-	text_far _RocketRadioText6
+	text_start _RocketRadioText6
 	text_end
 
 RocketRadioText7:
-	text_far _RocketRadioText7
+	text_start _RocketRadioText7
 	text_end
 
 RocketRadioText8:
-	text_far _RocketRadioText8
+	text_start _RocketRadioText8
 	text_end
 
 RocketRadioText9:
-	text_far _RocketRadioText9
+	text_start _RocketRadioText9
 	text_end
 
 RocketRadioText10:
-	text_far _RocketRadioText10
+	text_start _RocketRadioText10
 	text_end
 
 PokeFluteRadio:
@@ -1714,81 +1714,81 @@ BuenasPasswordChannelName:
 	db "BUENA'S PASSWORD@"
 
 BuenaRadioText1:
-	text_far _BuenaRadioText1
+	text_start _BuenaRadioText1
 	text_end
 
 BuenaRadioText2:
-	text_far _BuenaRadioText2
+	text_start _BuenaRadioText2
 	text_end
 
 BuenaRadioText3:
-	text_far _BuenaRadioText3
+	text_start _BuenaRadioText3
 	text_end
 
 BuenaRadioText4:
-	text_far _BuenaRadioText4
+	text_start _BuenaRadioText4
 	text_end
 
 BuenaRadioText5:
-	text_far _BuenaRadioText5
+	text_start _BuenaRadioText5
 	text_end
 
 BuenaRadioText6:
-	text_far _BuenaRadioText6
+	text_start _BuenaRadioText6
 	text_end
 
 BuenaRadioText7:
-	text_far _BuenaRadioText7
+	text_start _BuenaRadioText7
 	text_end
 
 BuenaRadioMidnightText1:
-	text_far _BuenaRadioMidnightText1
+	text_start _BuenaRadioMidnightText1
 	text_end
 
 BuenaRadioMidnightText2:
-	text_far _BuenaRadioMidnightText2
+	text_start _BuenaRadioMidnightText2
 	text_end
 
 BuenaRadioMidnightText3:
-	text_far _BuenaRadioMidnightText3
+	text_start _BuenaRadioMidnightText3
 	text_end
 
 BuenaRadioMidnightText4:
-	text_far _BuenaRadioMidnightText4
+	text_start _BuenaRadioMidnightText4
 	text_end
 
 BuenaRadioMidnightText5:
-	text_far _BuenaRadioMidnightText5
+	text_start _BuenaRadioMidnightText5
 	text_end
 
 BuenaRadioMidnightText6:
-	text_far _BuenaRadioMidnightText6
+	text_start _BuenaRadioMidnightText6
 	text_end
 
 BuenaRadioMidnightText7:
-	text_far _BuenaRadioMidnightText7
+	text_start _BuenaRadioMidnightText7
 	text_end
 
 BuenaRadioMidnightText8:
-	text_far _BuenaRadioMidnightText8
+	text_start _BuenaRadioMidnightText8
 	text_end
 
 BuenaRadioMidnightText9:
-	text_far _BuenaRadioMidnightText9
+	text_start _BuenaRadioMidnightText9
 	text_end
 
 BuenaRadioMidnightText10:
-	text_far _BuenaRadioMidnightText10
+	text_start _BuenaRadioMidnightText10
 	text_end
 
 BuenaOffTheAirText:
-	text_far _BuenaOffTheAirText
+	text_start _BuenaOffTheAirText
 	text_end
 
 CopyRadioTextToRAM:
 	ld a, [hl]
-	cp TX_FAR
-	jp z, FarCopyRadioText
+;	cp TX_FAR
+;	jp z, FarCopyRadioText
 	ld de, wRadioText
 	ld bc, 2 * SCREEN_WIDTH
 	jp CopyBytes

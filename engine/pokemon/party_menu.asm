@@ -796,43 +796,43 @@ PrintPartyMenuActionText:
 	dw .CameToItsSensesText
 
 .RecoveredSomeHPText:
-	text_far _RecoveredSomeHPText
+	text_start _RecoveredSomeHPText
 	text_end
 
 .CuredOfPoisonText:
-	text_far _CuredOfPoisonText
+	text_start _CuredOfPoisonText
 	text_end
 
 .RidOfParalysisText:
-	text_far _RidOfParalysisText
+	text_start _RidOfParalysisText
 	text_end
 
 .BurnWasHealedText:
-	text_far _BurnWasHealedText
+	text_start _BurnWasHealedText
 	text_end
 
 .WasDefrostedText:
-	text_far _WasDefrostedText
+	text_start _WasDefrostedText
 	text_end
 
 .WokeUpText:
-	text_far _WokeUpText
+	text_start _WokeUpText
 	text_end
 
 .HealthReturnedText:
-	text_far _HealthReturnedText
+	text_start _HealthReturnedText
 	text_end
 
 .RevitalizedText:
-	text_far _RevitalizedText
+	text_start _RevitalizedText
 	text_end
 
 .GrewToLevelText:
-	text_far _GrewToLevelText
+	text_start _GrewToLevelText
 	text_end
 
 .CameToItsSensesText:
-	text_far _CameToItsSensesText
+	text_start _CameToItsSensesText
 	text_end
 
 .PrintText:

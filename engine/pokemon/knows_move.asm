@@ -20,5 +20,5 @@ KnowsMove:
 	ret
 
 .KnowsMoveText:
-	text_far _KnowsMoveText
+	text_start _KnowsMoveText
 	text_end

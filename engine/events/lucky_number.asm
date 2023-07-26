@@ -199,11 +199,11 @@ endr
 	assert_table_length NUM_BOXES
 
 .LuckyNumberMatchPartyText:
-	text_far _LuckyNumberMatchPartyText
+	text_start _LuckyNumberMatchPartyText
 	text_end
 
 .LuckyNumberMatchPCText:
-	text_far _LuckyNumberMatchPCText
+	text_start _LuckyNumberMatchPCText
 	text_end
 
 PrintTodaysLuckyNumber:

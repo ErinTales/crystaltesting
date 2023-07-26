@@ -205,27 +205,27 @@ endr
 INCLUDE "data/items/mom_phone.asm"
 
 MomHiHowAreYouText:
-	text_far _MomHiHowAreYouText
+	text_start _MomHiHowAreYouText
 	text_end
 
 MomFoundAnItemText:
-	text_far _MomFoundAnItemText
+	text_start _MomFoundAnItemText
 	text_end
 
 MomBoughtWithYourMoneyText:
-	text_far _MomBoughtWithYourMoneyText
+	text_start _MomBoughtWithYourMoneyText
 	text_end
 
 MomItsInPCText:
-	text_far _MomItsInPCText
+	text_start _MomItsInPCText
 	text_end
 
 MomFoundADollText:
-	text_far _MomFoundADollText
+	text_start _MomFoundADollText
 	text_end
 
 MomItsInYourRoomText:
-	text_far _MomItsInYourRoomText
+	text_start _MomItsInYourRoomText
 	text_end
 
 

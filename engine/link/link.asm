@@ -558,7 +558,7 @@ LinkTimeout:
 	ret
 
 .LinkTimeoutText:
-	text_far _LinkTimeoutText
+	text_start _LinkTimeoutText
 	text_end
 
 ExchangeBytes:
@@ -1566,14 +1566,14 @@ LinkTrade_TradeStatsMenu:
 	jp InitTradeMenuDisplay
 
 .LinkTradeCantBattleText:
-	text_far _LinkTradeCantBattleText
+	text_start _LinkTradeCantBattleText
 	text_end
 
 .String_Stats_Trade:
 	db "STATS     TRADE@"
 
 .LinkAbnormalMonText:
-	text_far _LinkAbnormalMonText
+	text_start _LinkAbnormalMonText
 	text_end
 
 LinkTradeOTPartymonMenuCheckCancel:
@@ -2063,7 +2063,7 @@ String_TradeCancel:
 	next "CANCEL@"
 
 LinkAskTradeForText:
-	text_far _LinkAskTradeForText
+	text_start _LinkAskTradeForText
 	text_end
 
 String_TradeCompleted:

@@ -1102,22 +1102,22 @@ ObjectEvent::
 	jumptextfaceplayer ObjectEventText
 
 ObjectEventText::
-	text_far _ObjectEventText
-	text_end
+	text "オブジェイべント"
+	done
 
 BGEvent:: ; unreferenced
 	jumptext BGEventText
 
 BGEventText::
-	text_far _BGEventText
-	text_end
+	text "ビージーイべント"
+	done
 
 CoordinatesEvent:: ; unreferenced
 	jumptext CoordinatesEventText
 
 CoordinatesEventText::
-	text_far _CoordinatesEventText
-	text_end
+	text "ざひょうイべント"
+	done
 
 CheckObjectMask::
 	ldh a, [hMapObjectIndex]

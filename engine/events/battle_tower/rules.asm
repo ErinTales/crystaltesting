@@ -21,7 +21,7 @@ CheckForMobileBattleRules:
 	dw EggDoesNotQualifyText
 
 .BTExcuseMeText:
-	text_far _BTExcuseMeText
+	text_start _BTExcuseMeText
 	text_end
 
 _CheckForBattleTowerRules:
@@ -55,7 +55,7 @@ _CheckForBattleTowerRules:
 	dw YouCantTakeAnEggText
 
 ExcuseMeYoureNotReadyText:
-	text_far _ExcuseMeYoureNotReadyText
+	text_start _ExcuseMeYoureNotReadyText
 	text_end
 
 BattleTower_PleaseReturnWhenReady:
@@ -64,31 +64,31 @@ BattleTower_PleaseReturnWhenReady:
 	ret
 
 .BattleTowerReturnWhenReadyText:
-	text_far _BattleTowerReturnWhenReadyText
+	text_start _BattleTowerReturnWhenReadyText
 	text_end
 
 NeedAtLeastThreeMonText:
-	text_far _NeedAtLeastThreeMonText
+	text_start _NeedAtLeastThreeMonText
 	text_end
 
 EggDoesNotQualifyText:
-	text_far _EggDoesNotQualifyText
+	text_start _EggDoesNotQualifyText
 	text_end
 
 OnlyThreeMonMayBeEnteredText:
-	text_far _OnlyThreeMonMayBeEnteredText
+	text_start _OnlyThreeMonMayBeEnteredText
 	text_end
 
 TheMonMustAllBeDifferentKindsText:
-	text_far _TheMonMustAllBeDifferentKindsText
+	text_start _TheMonMustAllBeDifferentKindsText
 	text_end
 
 TheMonMustNotHoldTheSameItemsText:
-	text_far _TheMonMustNotHoldTheSameItemsText
+	text_start _TheMonMustNotHoldTheSameItemsText
 	text_end
 
 YouCantTakeAnEggText:
-	text_far _YouCantTakeAnEggText
+	text_start _YouCantTakeAnEggText
 	text_end
 
 BattleTower_ExecuteJumptable:

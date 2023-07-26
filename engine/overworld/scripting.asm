@@ -480,7 +480,7 @@ GiveItemScript:
 	end
 
 .ReceivedItemText:
-	text_far _ReceivedItemText
+	text_start _ReceivedItemText
 	text_end
 
 Script_verbosegiveitemvar:
@@ -563,11 +563,11 @@ CurItemName:
 	ret
 
 PutItemInPocketText:
-	text_far _PutItemInPocketText
+	text_start _PutItemInPocketText
 	text_end
 
 PocketIsFullText:
-	text_far _PocketIsFullText
+	text_start _PocketIsFullText
 	text_end
 
 Script_pokemart:

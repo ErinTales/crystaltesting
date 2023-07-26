@@ -157,7 +157,7 @@ GiveANickname_YesNo:
 	jp YesNoBox
 
 CaughtAskNicknameText:
-	text_far _CaughtAskNicknameText
+	text_start _CaughtAskNicknameText
 	text_end
 
 SetCaughtData:

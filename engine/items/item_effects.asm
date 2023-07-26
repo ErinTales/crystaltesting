@@ -1059,32 +1059,32 @@ LevelBallMultiplier:
 ; BallDodgedText and BallMissedText were used in Gen 1.
 
 BallDodgedText: ; unreferenced
-	text_far _BallDodgedText
+	text_start _BallDodgedText
 	text_end
 
 BallMissedText: ; unreferenced
-	text_far _BallMissedText
+	text_start _BallMissedText
 	text_end
 
 BallBrokeFreeText:
-	text_far _BallBrokeFreeText
+	text_start _BallBrokeFreeText
 	text_end
 
 BallAppearedCaughtText:
-	text_far _BallAppearedCaughtText
+	text_start _BallAppearedCaughtText
 	text_end
 
 BallAlmostHadItText:
-	text_far _BallAlmostHadItText
+	text_start _BallAlmostHadItText
 	text_end
 
 BallSoCloseText:
-	text_far _BallSoCloseText
+	text_start _BallSoCloseText
 	text_end
 
 Text_GotchaMonWasCaught:
 	; Gotcha! @ was caught!@ @
-	text_far Text_BallCaught
+	text_start Text_BallCaught
 	text_asm
 	call WaitSFX
 	push bc
@@ -1098,19 +1098,19 @@ Text_GotchaMonWasCaught:
 	ret
 
 WaitButtonText:
-	text_far _WaitButtonText
+	text_start _WaitButtonText
 	text_end
 
 BallSentToPCText:
-	text_far _BallSentToPCText
+	text_start _BallSentToPCText
 	text_end
 
 NewDexDataText:
-	text_far _NewDexDataText
+	text_start _NewDexDataText
 	text_end
 
 AskGiveNicknameText:
-	text_far _AskGiveNicknameText
+	text_start _AskGiveNicknameText
 	text_end
 
 ReturnToBattle_UseBall:
@@ -1220,7 +1220,7 @@ RareCandy_StatBooster_ExitMenu:
 	jp ClearPalettes
 
 ItemStatRoseText:
-	text_far _ItemStatRoseText
+	text_start _ItemStatRoseText
 	text_end
 
 StatStrings:
@@ -2047,7 +2047,7 @@ Softboiled_MilkDrinkFunction:
 	jr .loop
 
 .ItemCantUseOnMonText:
-	text_far _ItemCantUseOnMonText
+	text_start _ItemCantUseOnMonText
 	text_end
 
 EscapeRopeEffect:
@@ -2082,7 +2082,7 @@ UseRepel:
 	jp UseItemText
 
 RepelUsedEarlierIsStillInEffectText:
-	text_far _RepelUsedEarlierIsStillInEffectText
+	text_start _RepelUsedEarlierIsStillInEffectText
 	text_end
 
 XAccuracyEffect:
@@ -2223,16 +2223,16 @@ PokeFluteEffect:
 	ret
 
 .PlayedFluteText:
-	text_far _PlayedFluteText
+	text_start _PlayedFluteText
 	text_end
 
 .FluteWakeUpText:
-	text_far _FluteWakeUpText
+	text_start _FluteWakeUpText
 	text_end
 
 .PlayedTheFlute:
 	; played the # FLUTE.@ @
-	text_far Text_PlayedPokeFlute
+	text_start Text_PlayedPokeFlute
 	text_asm
 	ld a, [wBattleMode]
 	and a
@@ -2252,7 +2252,7 @@ BlueCardEffect:
 	jp MenuTextboxWaitButton
 
 .BlueCardBalanceText:
-	text_far _BlueCardBalanceText
+	text_start _BlueCardBalanceText
 	text_end
 
 CoinCaseEffect:
@@ -2260,7 +2260,7 @@ CoinCaseEffect:
 	jp MenuTextboxWaitButton
 
 .CoinCaseCountText:
-	text_far _CoinCaseCountText
+	text_start _CoinCaseCountText
 	text_end
 
 OldRodEffect:
@@ -2513,23 +2513,23 @@ RestorePP:
 	ret
 
 RaiseThePPOfWhichMoveText:
-	text_far _RaiseThePPOfWhichMoveText
+	text_start _RaiseThePPOfWhichMoveText
 	text_end
 
 RestoreThePPOfWhichMoveText:
-	text_far _RestoreThePPOfWhichMoveText
+	text_start _RestoreThePPOfWhichMoveText
 	text_end
 
 PPIsMaxedOutText:
-	text_far _PPIsMaxedOutText
+	text_start _PPIsMaxedOutText
 	text_end
 
 PPsIncreasedText:
-	text_far _PPsIncreasedText
+	text_start _PPsIncreasedText
 	text_end
 
 PPRestoredText:
-	text_far _PPRestoredText
+	text_start _PPRestoredText
 	text_end
 
 SquirtbottleEffect:
@@ -2567,7 +2567,7 @@ OpenBox:
 	jp UseDisposableItem
 
 .SentTrophyHomeText:
-	text_far _SentTrophyHomeText
+	text_start _SentTrophyHomeText
 	text_end
 
 NoEffect:
@@ -2662,55 +2662,55 @@ CantUseItemMessage:
 	jp PrintText
 
 ItemLooksBitterText:
-	text_far _ItemLooksBitterText
+	text_start _ItemLooksBitterText
 	text_end
 
 ItemCantUseOnEggText:
-	text_far _ItemCantUseOnEggText
+	text_start _ItemCantUseOnEggText
 	text_end
 
 ItemOakWarningText:
-	text_far _ItemOakWarningText
+	text_start _ItemOakWarningText
 	text_end
 
 ItemBelongsToSomeoneElseText:
-	text_far _ItemBelongsToSomeoneElseText
+	text_start _ItemBelongsToSomeoneElseText
 	text_end
 
 ItemWontHaveEffectText:
-	text_far _ItemWontHaveEffectText
+	text_start _ItemWontHaveEffectText
 	text_end
 
 BallBlockedText:
-	text_far _BallBlockedText
+	text_start _BallBlockedText
 	text_end
 
 BallDontBeAThiefText:
-	text_far _BallDontBeAThiefText
+	text_start _BallDontBeAThiefText
 	text_end
 
 NoCyclingText:
-	text_far _NoCyclingText
+	text_start _NoCyclingText
 	text_end
 
 ItemCantGetOnText:
-	text_far _ItemCantGetOnText
+	text_start _ItemCantGetOnText
 	text_end
 
 BallBoxFullText:
-	text_far _BallBoxFullText
+	text_start _BallBoxFullText
 	text_end
 
 ItemUsedText:
-	text_far _ItemUsedText
+	text_start _ItemUsedText
 	text_end
 
 ItemGotOnText: ; unreferenced
-	text_far _ItemGotOnText
+	text_start _ItemGotOnText
 	text_end
 
 ItemGotOffText: ; unreferenced
-	text_far _ItemGotOffText
+	text_start _ItemGotOffText
 	text_end
 
 ApplyPPUp:

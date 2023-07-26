@@ -56,11 +56,11 @@ RestartClock:
 	ret
 
 .ClockTimeMayBeWrongText:
-	text_far _ClockTimeMayBeWrongText
+	text_start _ClockTimeMayBeWrongText
 	text_end
 
 .ClockSetWithControlPadText:
-	text_far _ClockSetWithControlPadText
+	text_start _ClockSetWithControlPadText
 	text_end
 
 .SetClock:
@@ -108,11 +108,11 @@ RestartClock:
 	ret
 
 .ClockIsThisOKText:
-	text_far _ClockIsThisOKText
+	text_start _ClockIsThisOKText
 	text_end
 
 .ClockHasResetText:
-	text_far _ClockHasResetText
+	text_start _ClockHasResetText
 	text_end
 
 .joy_loop
