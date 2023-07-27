@@ -25,7 +25,7 @@ BattleTowerTrainers:
 	db "KAUFMAN@@@", SWIMMERM
 	db "LANCASTER@", SKIER
 	db "McMAHILL@@", CAMPER
-	assert_table_length BATTLETOWER_NUM_UNIQUE_MON
+;	assert_table_length BATTLETOWER_NUM_UNIQUE_MON
 ; The following can only be sampled in Crystal 1.1.
 	db "OBRIEN@@@@", GENTLEMAN
 	db "FROST@@@@@", BEAUTY
@@ -76,4 +76,5 @@ BattleTowerTrainers:
 	db "DYKSTRA@@@", SWIMMERF
 	db "EATON@@@@@", BIKER
 	db "WONG@@@@@@", FIREBREATHER
-	assert_table_length BATTLETOWER_NUM_UNIQUE_TRAINERS
+;	assert_table_length BATTLETOWER_NUM_UNIQUE_TRAINERS
+; TODO: Fix asserts

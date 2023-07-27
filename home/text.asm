@@ -220,23 +220,17 @@ ENDM
 	dict "<TM>",      TMChar
 	dict "<TRAINER>", TrainerChar
 	dict "<KOUGEKI>", PlaceKougeki
-	dict "<LF>",      NextLineChar
+	dict "<TA!>",     Char22
 	dict "<CONT>",    ContText
 	dict "<……>",      SixDotsChar
 	dict "<DONE>",    DoneText
 	dict "<PROMPT>",  PromptText
 	dict "<PKMN>",    PlacePKMN
 	dict "<POKE>",    PlacePOKE
-	dict "%",         NextChar
-	cp "¯"
-	jp z, $11dc
-
-	cp $1e
-	jp z, $11ea
-
-	cp $1d
-	jp z, $11e3
-
+	dict "<NO>",      Char25
+	dict "<WO>",      Char1F
+	dict "<TTE>",     Char1E
+	dict "<NI>",      Char1D
 	dict "<DEXEND>",  PlaceDexEnd
 	dict "<TARGET>",  PlaceMoveTargetsName
 	dict "<USER>",    PlaceMoveUsersName
@@ -312,38 +306,17 @@ PCChar:       print_name PCCharText
 RocketChar:   print_name RocketCharText
 PlacePOKe:    print_name PlacePOKeText
 PlaceKougeki: print_name KougekiText
+Char22:       print_name Char22Text
 SixDotsChar:  print_name SixDotsCharText
 PlacePKMN:    print_name PlacePKMNText
 PlacePOKE:    print_name PlacePOKEText
+Char25:       print_name Char25Text
+Char1F:       print_name Char1FText
+Char1D:       print_name Char1DText
+Char1E:       print_name Char1EText
 PlaceJPRoute: print_name PlaceJPRouteText
 PlaceWatashi: print_name PlaceWatashiText
 PlaceKokoWa:  print_name PlaceKokoWaText
-Jump_000_11e3:
-	push de
-	ld de, $12b5
-	jp PlaceCommandCharacter
-
-Jump_000_11ea:
-	push de
-	ld de, $12b8
-	jp PlaceCommandCharacter
-
-Jump_000_11f1:
-	push de
-	ld de, $12bb
-	jp PlaceCommandCharacter
-
-
-Jump_000_11f8:
-	push de
-	ld de, $12c2
-	jp PlaceCommandCharacter
-
-
-Jump_000_11ff:
-	push de
-	ld de, $12c6
-	jp PlaceCommandCharacter
 
 PlaceMoveTargetsName::
 	ldh a, [hBattleTurn]
@@ -435,11 +408,12 @@ EnemyText::       db "てきの @"
 PlacePKMNText::   db "が @"
 PlacePOKEText::   db "はの　@"
 String_Space::    db " @"
-; These strings have been dummied out.
-	db "を　@"
-	db "に　@"
-	db "って@"
-
+Char25Text::      db "は @"
+Char22Text::      db "の @"
+Char1FText::      db "を @"
+Char1EText::
+Char1DText::
+; TODO: Fix Char1E Char1D
 PlaceJPRouteText:: db "ばん　どうろ@"
 PlaceWatashiText:: db "わたし@"
 PlaceKokoWaText::  db "ここは　@"

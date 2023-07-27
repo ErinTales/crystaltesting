@@ -1,5 +1,9 @@
 SaveMenu:
 	call LoadStandardMenuHeader
+	ld de, $500
+	ld a, 1
+	ld hl, $5e83
+	rst 8 ;farcall somewhere
 	call SpeechTextbox
 	call UpdateSprites
 	farcall SaveMenu_CopyTilemapAtOnce
@@ -278,59 +282,10 @@ _SaveGameData:
 	call SaveBackupPlayerData
 	call SaveBackupPokemonData
 	call SaveBackupChecksum
-	call UpdateStackTop
 	farcall BackupPartyMonMail
 	farcall BackupMobileEventIndex
 	farcall SaveRTC
-	ld a, BANK(sBattleTowerChallengeState)
-	call OpenSRAM
-	ld a, [sBattleTowerChallengeState]
-	cp BATTLETOWER_RECEIVED_REWARD
-	jr nz, .ok
-	xor a
-	ld [sBattleTowerChallengeState], a
-.ok
-	call CloseSRAM
 	ret
-
-UpdateStackTop:
-; sStackTop appears to be unused.
-; It could have been used to debug stack overflow during saving.
-	call FindStackTop
-	ld a, BANK(sStackTop)
-	call OpenSRAM
-	ld a, [sStackTop + 0]
-	ld e, a
-	ld a, [sStackTop + 1]
-	ld d, a
-	or e
-	jr z, .update
-	ld a, e
-	sub l
-	ld a, d
-	sbc h
-	jr c, .done
-
-.update
-	ld a, l
-	ld [sStackTop + 0], a
-	ld a, h
-	ld [sStackTop + 1], a
-
-.done
-	call CloseSRAM
-	ret
-
-FindStackTop:
-; Find the furthest point that sp has traversed to.
-; This is distinct from the current value of sp.
-	ld hl, wStackBottom
-.loop
-	ld a, [hl]
-	or a
-	ret nz
-	inc hl
-	jr .loop
 
 SavingDontTurnOffThePower:
 	; Prevent joypad interrupts
@@ -361,14 +316,12 @@ ErasePreviousSave:
 	call EraseHallOfFame
 	call EraseLinkBattleStats
 	call EraseMysteryGift
-	call SaveData
+	call InitDefaultEZChatMsgs
 	call EraseBattleTowerStatus
-	ld a, BANK(sStackTop)
-	call OpenSRAM
-	xor a
-	ld [sStackTop + 0], a
-	ld [sStackTop + 1], a
-	call CloseSRAM
+	call SaveData
+	call Function14d6c
+	call Function14d83
+	call Function14d93
 	ld a, $1
 	ld [wSavedAtLeastOnce], a
 	ret
@@ -424,11 +377,27 @@ InitDefaultEZChatMsgs: ; unreferenced
 	db $11, EZCHAT_TIME,         $0c, EZCHAT_CONVERSATION, $06, EZCHAT_BATTLE
 
 EraseBattleTowerStatus:
-	ld a, BANK(sBattleTowerChallengeState)
+	ld a, $5 ; BANK(sBattleTowerChallengeState)?
 	call OpenSRAM
 	xor a
-	ld [sBattleTowerChallengeState], a
+	ld [$A800], a ; sBattleTowerChallengeState?
+	ld hl, $aa3e
+	ld bc, $05e5
+	call ByteFill
+	ld hl, .Data
+	ld de, $a89c
+	ld bc, $16
+	call CopyBytes
+	xor a
+	ld hl, $a8b2
+	ld bc, $96
+	call ByteFill
 	jp CloseSRAM
+
+.Data
+	db "ーーーーーー@"
+	db "　　　　ーーー@"
+	db "　　　　　　　"
 
 SaveData:
 	call _SaveData
@@ -740,15 +709,6 @@ LoadPlayerData:
 	ld de, wCurMapData
 	ld bc, wCurMapDataEnd - wCurMapData
 	call CopyBytes
-	call CloseSRAM
-	ld a, BANK(sBattleTowerChallengeState)
-	call OpenSRAM
-	ld a, [sBattleTowerChallengeState]
-	cp BATTLETOWER_RECEIVED_REWARD
-	jr nz, .not_4
-	ld a, BATTLETOWER_WON_CHALLENGE
-	ld [sBattleTowerChallengeState], a
-.not_4
 	call CloseSRAM
 	ret
 
@@ -1099,33 +1059,45 @@ Checksum:
 	ret
 
 WouldYouLikeToSaveTheGameText:
-	text_start _WouldYouLikeToSaveTheGameText
-	text_end
+	text "ここまでの かつやくを"
+	line "#レポートに かきこみますか?"
+	done
 
 SavingDontTurnOffThePowerText:
-	text_start _SavingDontTurnOffThePowerText
-	text_end
+	text "#レポートに かきこんでいます"
+	line "でんげんを きらないで ください"
+	done
 
 SavedTheGameText:
-	text_start _SavedTheGameText
-	text_end
+	text "<PLAYER>は"
+	line "レポートに しっかり かきのこした!"
+	done
 
 AlreadyASaveFileText:
-	text_start _AlreadyASaveFileText
-	text_end
+	text "まえに かかれた レポートに"
+	line "うえから かいても いいですか?"
+	done
 
 AnotherSaveFileText:
-	text_start _AnotherSaveFileText
-	text_end
+	text "べつの ぼうけんの "
+	line "レポートが かかれています!"
+	cont "うえから かいても いいですか?"
+	done
 
 SaveFileCorruptedText:
-	text_start _SaveFileCorruptedText
-	text_end
+	text "レポートの ないようが"
+	line "こわれています!!"
+	prompt
 
 ChangeBoxSaveText:
-	text_start _ChangeBoxSaveText
-	text_end
+	text "ボックスを かえると"
+	line "どうじに レポートが かかれます"
+	cont "いいですか?"
+	done
 
 MoveMonWOMailSaveText:
-	text_start _MoveMonWOMailSaveText
-	text_end
+	text "この きのうを つかうと"
+	line "#を いどう するたびに"
+	cont "レポートが かかれます"
+	para "よろしいですか?"
+	done

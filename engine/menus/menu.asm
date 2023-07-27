@@ -732,7 +732,8 @@ Error_Cant_ExitMenu:
 	jr .infinite_loop
 
 .WindowPoppingErrorText:
-	text_start _WindowPoppingErrorText
+	text "ポップできる ウィンドウが"
+	next "ありません！"
 	text_end
 
 _InitVerticalMenuCursor::

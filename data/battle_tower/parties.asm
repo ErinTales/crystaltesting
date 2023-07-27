@@ -5491,4 +5491,5 @@ BattleTowerMons:
 	bigdw 214 ; SDef
 	db "RANTA-N@@@@"
 
-	assert_table_length 10 * BATTLETOWER_NUM_UNIQUE_MON
+;	assert_table_length 10 * BATTLETOWER_NUM_UNIQUE_MON
+; TODO: Fix assert

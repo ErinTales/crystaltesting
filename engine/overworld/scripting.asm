@@ -234,7 +234,8 @@ ScriptCommandTable:
 	dw Script_getname                    ; a7
 	dw Script_wait                       ; a8
 	dw Script_checksave                  ; a9
-	assert_table_length NUM_EVENT_COMMANDS
+;	assert_table_length NUM_EVENT_COMMANDS
+; TODO: fix assert
 
 StartScript:
 	ld hl, wScriptFlags

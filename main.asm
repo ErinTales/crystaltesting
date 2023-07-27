@@ -9,7 +9,7 @@ INCLUDE "engine/pokemon/learn.asm"
 INCLUDE "engine/pokemon/correct_nick_errors.asm"
 INCLUDE "engine/math/math.asm"
 INCLUDE "data/items/attributes.asm"
-INCLUDE "data/unknown/unknown_data1.asm"
+INCLUDE "data/items/names.asm"
 INCLUDE "engine/overworld/npc_movement.asm"
 INCLUDE "engine/events/happiness_egg.asm"
 INCLUDE "engine/events/shuckle.asm"
@@ -631,7 +631,6 @@ INCLUDE "data/phone/text/unused.asm"
 
 SECTION "Miscellaneous Text", ROMX
 
-INCLUDE "data/items/names.asm"
 INCLUDE "engine/items/print_item_description.asm"
 INCLUDE "data/moves/names.asm"
 INCLUDE "engine/overworld/landmarks.asm"

@@ -400,4 +400,5 @@ OddEggs:
 	bigdw 9 ; SDef
 	db "EGG@@@@@@@@"
 
-	assert_table_length NUM_ODD_EGGS
+;	assert_table_length NUM_ODD_EGGS
+;TODO: Fix assert

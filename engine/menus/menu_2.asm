@@ -16,8 +16,6 @@ PlaceMenuItemQuantity:
 	pop hl
 	and a
 	jr nz, .done
-	ld de, $15
-	add hl, de
 	ld [hl], "×"
 	inc hl
 	ld de, wMenuSelectionQuantity
@@ -39,7 +37,8 @@ PlaceMoneyBottomLeft:
 
 PlaceMoneyAtTopLeftOfTextbox:
 	ld hl, MoneyTopRightMenuHeader
-	lb de, 0, 11
+	ld d, 0
+	ld e, 0
 	call OffsetMenuHeader
 
 PlaceMoneyTextbox:
@@ -50,6 +49,7 @@ PlaceMoneyTextbox:
 	ld de, wMoney
 	lb bc, PRINTNUM_MONEY | 3, 6
 	call PrintNum
+	ld [hl], "¥"
 	ret
 
 MoneyTopRightMenuHeader:
@@ -94,6 +94,8 @@ DisplayMoneyAndCoinBalance:
 	ld de, wMoney
 	lb bc, PRINTNUM_MONEY | 3, 6
 	call PrintNum
+	hlcoord 15, 6
+	ld [hl], "¥"
 	hlcoord 6, 3
 	ld de, CoinString
 	call PlaceString
@@ -101,14 +103,17 @@ DisplayMoneyAndCoinBalance:
 	ld de, wCoins
 	lb bc, 2, 4
 	call PrintNum
+	hlcoord 15, 6
+	ld de, ShowMoney_TerminatorString
+	call PlaceString
 	ret
 
 MoneyString:
-	db "MONEY@"
+	db "おかね@"
 CoinString:
-	db "COIN@"
+	db "コイン@"
 ShowMoney_TerminatorString:
-	db "@"
+	db "まい@"
 
 StartMenu_PrintSafariGameStatus: ; unreferenced
 	ld hl, wOptions

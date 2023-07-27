@@ -246,7 +246,7 @@ SetDefaultBoxNames:
 	ld [hli], a
 	ld [hl], "@"
 	pop hl
-	ld de, 9
+	ld de, BOX_NAME_LENGTH
 	add hl, de
 	inc c
 	ld a, c
@@ -711,8 +711,7 @@ OakText2:
 	para "この　せかいには"
 	line "ポケットモンスターと　よばれる"
 	cont "いきもの　たちが"
-	cont "いたるところに　すんでいる！"
-	text_end
+	cont "いたるところに　すんでいる！@"
 	text_asm
 	ld a, WOOPER
 	call PlayMonCry
@@ -762,9 +761,7 @@ OakText7:
 
 	para "ゆめと　ぼうけんと！"
 	line "ポケット　モンスターの　せかいへ！"
-	cont "レッツ　"
-	db $09
-	db "ー！"
+	cont "レッツ ゴー!"
 	para "あとで　また　あおう！"
 	done
 
@@ -1043,8 +1040,8 @@ StartTitleScreen:
 	jp hl
 
 .dw
+	dw Intro_MainMenu
 	dw DeleteSaveData
-	dw IntroSequence
 	dw IntroSequence
 	dw IntroSequence
 
@@ -1118,7 +1115,7 @@ TitleScreenEntrance:
 ; Reversed signage for every other line's position.
 ; This is responsible for the interlaced effect.
 	ld hl, $d118
-	ld bc, $0028
+	ld bc, JumpTable
 	ld a, e
 	xor $ff
 	inc a

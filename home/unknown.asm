@@ -14,12 +14,12 @@ jp_3f49::
 	ret
 
 Function3f52:: ; unreferenced
-	ld hl, $d000
-	ld b, $00
-.jr_3f57:
+	ld hl, wDecompressScratch
+	ld b, 0
+.row:
 	push bc
-	ld c, $08
-.jr_3f5a
+	ld c, 1 tiles / 2
+.col
 	ld a, [de]
 	inc de
 	cpl
@@ -27,19 +27,18 @@ Function3f52:: ; unreferenced
 	inc hl
 	ld [hli], a
 	dec c
-	jr nz, .jr_3f5a
-
+	jr nz, .col
 	pop bc
 	dec c
-	jr nz, .jr_3f57
+	jr nz, .row
 	ret
 
 Function3f6b:: ; unreferenced
-	ld hl, $d000
-.jr_3f6c
+	ld hl, wDecompressScratch
+.row
 	push bc
-	ld c, $08
-.jr_3f6f
+	ld c, 1 tiles / 2
+.col
 	ld a, [de]
 	inc de
 	inc de
@@ -48,8 +47,8 @@ Function3f6b:: ; unreferenced
 	inc hl
 	ld [hli], a
 	dec c
-	jr nz, .jr_3f6f
+	jr nz, .col
 	pop bc
 	dec c
-	jr nz, .jr_3f6c
+	jr nz, .row
 	ret

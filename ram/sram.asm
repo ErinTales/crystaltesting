@@ -182,15 +182,15 @@ MACRO boxes
 	endr
 ENDM
 
-SECTION "Boxes 1-7", SRAM
+SECTION "Boxes 1-6", SRAM
 
 ; sBox1 - sBox7
-	boxes 7
+	boxes 6
 
-SECTION "Boxes 8-14", SRAM
+SECTION "Boxes 7-9", SRAM
 
-; sBox8 - sBox14
-	boxes 7
+; sBox7 - sBox9
+	boxes 3
 
 ; All 14 boxes fit exactly within 2 SRAM banks
 	assert box_n == NUM_BOXES, \
