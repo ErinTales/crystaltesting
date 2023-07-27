@@ -276,11 +276,6 @@ _CGB_Pokedex:
 	ld a, $1 ; green question mark palette
 	call FillBoxCGB
 	call InitPartyMenuOBPals
-	ld hl, PokedexCursorPalette
-	ld de, wOBPals1 palette 7 ; green cursor palette
-	ld bc, 1 palettes
-	ld a, BANK(wOBPals1)
-	call FarCopyWRAM
 	call ApplyAttrmap
 	call ApplyPals
 	ld a, TRUE
@@ -289,9 +284,6 @@ _CGB_Pokedex:
 
 PokedexQuestionMarkPalette:
 INCLUDE "gfx/pokedex/question_mark.pal"
-
-PokedexCursorPalette:
-INCLUDE "gfx/pokedex/cursor.pal"
 
 _CGB_BillsPC:
 	ld de, wBGPals1
@@ -312,28 +304,6 @@ _CGB_BillsPC:
 .GotPalette:
 	call WipeAttrmap
 	hlcoord 1, 4, wAttrmap
-	lb bc, 7, 7
-	ld a, $1 ; mon palette
-	call FillBoxCGB
-	call InitPartyMenuOBPals
-	call ApplyAttrmap
-	call ApplyPals
-	ld a, TRUE
-	ldh [hCGBPalUpdate], a
-	ret
-
-_CGB_Unknown: ; unreferenced
-	ld hl, BillsPCOrangePalette
-	call LoadHLPaletteIntoDE
-	jr .GotPalette
-
-.GetMonPalette: ; unreferenced
-	ld bc, wTempMonDVs
-	call GetPlayerOrMonPalettePointer
-	call LoadPalette_White_Col1_Col2_Black
-.GotPalette:
-	call WipeAttrmap
-	hlcoord 1, 1, wAttrmap
 	lb bc, 7, 7
 	ld a, $1 ; mon palette
 	call FillBoxCGB
