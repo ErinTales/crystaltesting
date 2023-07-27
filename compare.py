@@ -25,33 +25,33 @@ def compare_files(file1, file2, sym_file):
     for i in range(diff_address, diff_address + 8):
         bank = i // 0x4000
         address = i % 0x4000
-        # Adjust for switchable bank area
         if bank != 0:
             address += 0x4000
         print(f"{bank:02X}:{address:04X}  {bytes1[i]:02X}  {bytes2[i]:02X}")
 
     # Find the closest symbol from the sym file
     closest_symbol = None
-    closest_address = None
+    closest_address = -1
     with open(sym_file, "r") as sf:
         for line in sf:
             if line.startswith(';'):  # skip comment lines
                 continue
             parts = line.strip().split()
-            bank_address = parts[0]
-            bank = int(bank_address.split(':')[0], 16)
-            address = int(bank_address.split(':')[1], 16)
-            absolute_address = bank * 0x4000 + (address if bank == 0 else address - 0x4000)
+            bank = int(parts[0].split(':')[0], 16)
+            address = int(parts[0].split(':')[1], 16)
             symbol = parts[1]
-            if absolute_address <= diff_address and (closest_address is None or absolute_address > closest_address):
-                closest_address = absolute_address
+            current_address = bank * 0x4000 + (address if address < 0x4000 else address - 0x4000)
+            if current_address > closest_address and current_address <= diff_address:
+                closest_address = current_address
                 closest_symbol = symbol
 
     if closest_symbol is None:
         print("No symbol found before differing bytes.")
     else:
+        bank = closest_address // 0x4000
+        address = closest_address % 0x4000 + (0x4000 if bank != 0 else 0)
         print("The closest symbol before differing bytes is at address:",
-              hex(closest_address), "and is:", closest_symbol)
+              f"{bank:02X}:{address:04X}", "and is:", closest_symbol)
 
 
 # Usage
