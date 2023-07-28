@@ -40,6 +40,8 @@ def compare_files(file1, file2, sym_file):
             bank = int(parts[0].split(':')[0], 16)
             address = int(parts[0].split(':')[1], 16)
             symbol = parts[1]
+            if address > 0x7FFF:  # skip addresses beyond the ROM address space
+                continue
             current_address = bank * 0x4000 + (address if address < 0x4000 else address - 0x4000)
             if current_address > closest_address and current_address <= diff_address:
                 closest_address = current_address

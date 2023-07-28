@@ -25,13 +25,6 @@ SetPlayerPalette:
 	ret
 
 GameCornerPrizeMonCheckDex:
-	ld a, [wScriptVar]
-	dec a
-	call CheckCaughtMon
-	ret nz
-	ld a, [wScriptVar]
-	dec a
-	call SetSeenAndCaughtMon
 	call FadeToMenu
 	ld a, [wScriptVar]
 	ld [wNamedObjectIndex], a
@@ -93,7 +86,7 @@ NameRival:
 	ret
 
 .DefaultName:
-	db "SILVER@"
+	db "シルバー@"
 
 NameRater:
 	farcall _NameRater
@@ -167,7 +160,13 @@ GetMysteryGiftItem:
 	ret
 
 .ReceiveItemText:
-	text_start _ReceiveItemText
+	text_ram wPlayerName
+	text "は　はいたついんから"
+	line "@"
+	text_ram wStringBuffer1
+	text "を　もらった！@"
+	sound_item
+	text_promptbutton
 	text_end
 
 BugContestJudging:
@@ -254,12 +253,12 @@ CheckCoinsAndCoinCase:
 	ret
 
 .NoCoinsText:
-	text_start _NoCoinsText
-	text_end
+	text "コインを　もっていません！"
+	prompt
 
 .NoCoinCaseText:
-	text_start _NoCoinCaseText
-	text_end
+	text "コインケースをもっていません！"
+	prompt
 
 ClearBGPalettesBufferScreen:
 	call ClearBGPalettes

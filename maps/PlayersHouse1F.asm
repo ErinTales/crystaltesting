@@ -57,7 +57,6 @@ MeetMomScript:
 	sjump .DayOfWeekDone
 
 .WrongDay:
-	special InitialClearDSTFlag
 	yesorno
 	iffalse .SetDayOfWeek
 .DayOfWeekDone:

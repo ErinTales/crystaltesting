@@ -33,5 +33,6 @@ BugContest_SetCaughtContestMon:
 	jp GeneratePartyMonStats
 
 .ContestCaughtMonText:
-	text_start _ContestCaughtMonText
-	text_end
+	text_ram wStringBuffer1
+	text "を　つかまえた！"
+	prompt

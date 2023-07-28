@@ -1190,8 +1190,13 @@ GiveEgg::
 	dec a
 	ld hl, wPartyMonNicknames
 	call SkipNames
-	ld de, String_Egg
-	call CopyName2
+	ld a, "タ"
+	ld [hli], a
+	ld a, "マ"
+	ld [hli], a
+	ld a, "ゴ"
+	ld [hli], a
+	ld [hl], "@"
 	ld a, [wPartyCount]
 	dec a
 	ld hl, wPartyMon1Happiness
@@ -1215,9 +1220,6 @@ GiveEgg::
 	ld [hl], a
 	and a
 	ret
-
-String_Egg:
-	db "EGG@"
 
 RemoveMonFromPartyOrBox:
 	ld hl, wPartyCount
@@ -1802,8 +1804,10 @@ GivePoke::
 	ret
 
 WasSentToBillsPCText:
-	text_start _WasSentToBillsPCText
-	text_end
+	text_ram wStringBuffer1
+	text "<WA>マサキ<NO>ところへ"
+	line "てんそうされた！"
+	prompt
 
 InitNickname:
 	push de

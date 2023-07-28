@@ -306,36 +306,12 @@ HPBarAnim_BGMapUpdate:
 .bottom_half_of_screen
 	ld c, $1
 .got_third
-	push af
-	cp $2
-	jr z, .skip_delay
-	cp $5
-	jr z, .skip_delay
 	ld a, $2
 	ldh [hBGMapMode], a
 	ld a, c
 	ldh [hBGMapThird], a
 	call DelayFrame
 .skip_delay
-	ld a, $1
-	ldh [hBGMapMode], a
-	ld a, c
-	ldh [hBGMapThird], a
-	call DelayFrame
-	pop af
-	cp $2
-	jr z, .two_frames
-	cp $5
-	jr z, .two_frames
-	ret
-
-.two_frames
-	inc c
-	ld a, $2
-	ldh [hBGMapMode], a
-	ld a, c
-	ldh [hBGMapThird], a
-	call DelayFrame
 	ld a, $1
 	ldh [hBGMapMode], a
 	ld a, c
