@@ -339,9 +339,6 @@ SECTION UNION "Miscellaneous", WRAM0
 ; battle tower temp struct
 wBT_OTTemp:: battle_tower_struct wBT_OTTemp
 
-lv10curr:: dw
-lv10rec:: dw
-
 SECTION UNION "Miscellaneous", WRAM0
 
 ; battle data
@@ -3652,5 +3649,12 @@ SECTION "Stack RAM", WRAMX
 
 wWindowStack:: ds $1000 - 1
 wWindowStackBottom:: ds 1
+
+ENDU
+
+SECTION "TEST", WRAMX
+
+lv10curr:: dw
+lv10rec:: dw
 
 ENDSECTION
