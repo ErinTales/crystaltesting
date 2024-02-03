@@ -339,6 +339,8 @@ SECTION UNION "Miscellaneous", WRAM0
 ; battle tower temp struct
 wBT_OTTemp:: battle_tower_struct wBT_OTTemp
 
+lv10curr:: dw
+lv10rec:: dw
 
 SECTION UNION "Miscellaneous", WRAM0
 
