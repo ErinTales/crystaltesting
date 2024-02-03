@@ -4,6 +4,7 @@
 	const BATTLETOWER1F_COOLTRAINER_F
 	const BATTLETOWER1F_BUG_CATCHER
 	const BATTLETOWER1F_GRANNY
+	const RECORD_CHECKER
 
 BattleTower1F_MapScripts:
 	def_scene_scripts
@@ -47,6 +48,13 @@ BattleTower1FRulesSign:
 	yesorno
 	iffalse .skip
 	writetext Text_BattleTowerRules
+	waitbutton
+.skip:
+	closetext
+	end
+
+RecordChecker:
+	writetext Text_Test
 	waitbutton
 .skip:
 	closetext
@@ -353,6 +361,10 @@ Text_BattleTowerWelcomesYou:
 
 	para "I could show you"
 	line "to a BATTLE ROOM."
+	done
+
+Test_Text:
+	text "Test hi"
 	done
 
 Text_WantToGoIntoABattleRoom:
@@ -806,6 +818,7 @@ BattleTower1F_MapEvents:
 	bg_event  6,  6, BGEVENT_READ, BattleTower1FRulesSign
 
 	def_object_events
+	object_event 12,  6, RECORD_CHECKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RecordChecker, -1
 	object_event  7,  6, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BattleTower1FReceptionistScript, -1
 	object_event 14,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BattleTower1FYoungsterScript, -1
 	object_event  4,  9, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BattleTower1FCooltrainerFScript, -1
