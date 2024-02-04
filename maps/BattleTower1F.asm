@@ -4,7 +4,6 @@
 	const BATTLETOWER1F_COOLTRAINER_F
 	const BATTLETOWER1F_BUG_CATCHER
 	const BATTLETOWER1F_GRANNY
-	const RECORD_CHECKER
 
 BattleTower1F_MapScripts:
 	def_scene_scripts
@@ -53,17 +52,21 @@ BattleTower1FRulesSign:
 	closetext
 	end
 
-RecordCheckerScript:
-	faceplayer
+
+RecordCheckerSign:
 	opentext
 	writetext Text_WantToSeeRecord
-	yesorno
-	iffalse Script_BattleTowerHopeToServeYouAgain
-	writetext Text_DisplayRecord10
+		yesorno
+	iffalse .skip
+	writetext Text_RecordSign
 	waitbutton
-	writetext Text_DisplayCurrent10
+	writetext Text_DisplayCurrent
 	waitbutton
-	sjump Script_BattleTowerHopeToServeYouAgain
+	writetext Text_DisplayBest
+	waitbutton
+.skip:
+	closetext
+	end
 
 BattleTower1FReceptionistScript:
 	setval BATTLETOWERACTION_GET_CHALLENGE_STATE ; readmem sBattleTowerChallengeState
@@ -369,22 +372,30 @@ Text_BattleTowerWelcomesYou:
 	done
 
 Text_WantToSeeRecord:
-	text "Want to see your"
-	line "RECORD?"
+	text "BATTLE TOWER"
+	line "RECORD is"
+	
+	para "written here."
+	line "Check RECORD?"
 	done
 
 Text_TODO:
 	text "UNFINISHED"
 	done
 	
-Text_DisplayRecord10:
+Text_RecordSign:
+	text "<PLAYER>'s"
+	line "RECORD:"
+	done
+	
+Text_DisplayCurrent:
 	text "Current: @"
 	text_decimal wBaseUnusedFrontpic, 2, 5 ;unused var repurposed.
 	text " "
 	done
 
-Text_DisplayCurrent10:
-	text "Record: @"
+Text_DisplayBest:
+	text "Best: @"
 	text_decimal wBaseUnusedBackpic, 2, 5 ;unused var repurposed.
 	text " "
 	done
@@ -838,9 +849,9 @@ BattleTower1F_MapEvents:
 
 	def_bg_events
 	bg_event  6,  6, BGEVENT_READ, BattleTower1FRulesSign
-
+	bg_event  5,  6, BGEVENT_READ, RecordCheckerSign
+	
 	def_object_events
-	object_event 12,  6, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RecordCheckerScript, -1
 	object_event  7,  6, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BattleTower1FReceptionistScript, -1
 	object_event 14,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BattleTower1FYoungsterScript, -1
 	object_event  4,  9, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BattleTower1FCooltrainerFScript, -1
