@@ -369,7 +369,7 @@ Text_WantToSeeRecord:
 	text "RECORD?"
 	done
 
-Text_TODO
+Text_TODO:
 	text "UNFINISHED"
 	done
 
