@@ -57,7 +57,8 @@ RecordCheckerScript:
 	writetext Text_WantToSeeRecord
 	yesorno
 	iffalse Script_WaitButton
-	writetext Text_TODO
+	writetext Text_DisplayRecord10
+	waitbutton
 	sjump Script_BattleTowerHopeToServeYouAgain
 
 BattleTower1FReceptionistScript:
@@ -371,6 +372,12 @@ Text_WantToSeeRecord:
 Text_TODO
 	text "UNFINISHED"
 	done
+
+Text_DisplayRecord10:
+	text "Current wins: @"
+	text_decimal lv10curr, 2, 5
+	text " wins!"
+	prompt
 
 Text_WantToGoIntoABattleRoom:
 	text "Want to go into a"
