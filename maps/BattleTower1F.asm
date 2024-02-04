@@ -54,10 +54,14 @@ BattleTower1FRulesSign:
 	end
 
 RecordCheckerScript:
+	faceplayer
+	opentext
 	writetext Text_WantToSeeRecord
 	yesorno
-	iffalse Script_WaitButton
+	iffalse Script_BattleTowerHopeToServeYouAgain
 	writetext Text_DisplayRecord10
+	waitbutton
+	writetext Text_DisplayCurrent10
 	waitbutton
 	sjump Script_BattleTowerHopeToServeYouAgain
 
@@ -366,18 +370,24 @@ Text_BattleTowerWelcomesYou:
 
 Text_WantToSeeRecord:
 	text "Want to see your"
-	text "RECORD?"
+	line "RECORD?"
 	done
 
 Text_TODO:
 	text "UNFINISHED"
 	done
-
+	
 Text_DisplayRecord10:
-	text "Current wins: @"
-	text_decimal lv10curr, 2, 5
-	text " wins!"
-	prompt
+	text "Current: @"
+	text_decimal wBaseUnusedFrontpic, 2, 5 ;unused var repurposed.
+	text " "
+	done
+
+Text_DisplayCurrent10:
+	text "Record: @"
+	text_decimal wBaseUnusedBackpic, 2, 5 ;unused var repurposed.
+	text " "
+	done
 
 Text_WantToGoIntoABattleRoom:
 	text "Want to go into a"
