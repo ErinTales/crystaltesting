@@ -53,12 +53,12 @@ BattleTower1FRulesSign:
 	closetext
 	end
 
-RecordChecker:
-	writetext Text_Test
-	waitbutton
-.skip:
-	closetext
-	end
+RecordCheckerScript:
+	writetext Text_WantToSeeRecord
+	yesorno
+	iffalse Script_WaitButton
+	writetext Text_TODO
+	sjump Script_BattleTowerHopeToServeYouAgain
 
 BattleTower1FReceptionistScript:
 	setval BATTLETOWERACTION_GET_CHALLENGE_STATE ; readmem sBattleTowerChallengeState
@@ -363,8 +363,13 @@ Text_BattleTowerWelcomesYou:
 	line "to a BATTLE ROOM."
 	done
 
-Test_Text:
-	text "Test hi"
+Text_WantToSeeRecord:
+	text "Want to see your"
+	text "RECORD?"
+	done
+
+Text_TODO
+	text "UNFINISHED"
 	done
 
 Text_WantToGoIntoABattleRoom:
@@ -818,7 +823,7 @@ BattleTower1F_MapEvents:
 	bg_event  6,  6, BGEVENT_READ, BattleTower1FRulesSign
 
 	def_object_events
-	object_event 12,  6, RECORD_CHECKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RecordChecker, -1
+	object_event 12,  6, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, RecordCheckerScript, -1
 	object_event  7,  6, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BattleTower1FReceptionistScript, -1
 	object_event 14,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, BattleTower1FYoungsterScript, -1
 	object_event  4,  9, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BattleTower1FCooltrainerFScript, -1
