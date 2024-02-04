@@ -2996,6 +2996,9 @@ wMomSavingMoney::
 
 wCoins:: dw
 
+lv10curr:: dw
+lv10rec:: dw
+
 wBadges::
 wJohtoBadges:: flag_array NUM_JOHTO_BADGES
 wKantoBadges:: flag_array NUM_KANTO_BADGES
@@ -3649,12 +3652,5 @@ SECTION "Stack RAM", WRAMX
 
 wWindowStack:: ds $1000 - 1
 wWindowStackBottom:: ds 1
-
-ENDU
-
-SECTION "TEST", WRAMX
-
-lv10curr:: dw
-lv10rec:: dw
 
 ENDSECTION
