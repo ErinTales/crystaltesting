@@ -52,6 +52,12 @@ Script_BattleRoomLoop:
 	pause 60
 	special FadeInPalettes
 	special RestartMapMusic
+	;custom - +1 to current
+	readmem wBaseUnusedFrontpic
+	addval 1
+	writemem wBaseUnusedFrontpic
+	;TODO - update record, this only updates current!!!
+	;custom end
 	opentext
 	writetext Text_NextUpOpponentNo
 	yesorno
@@ -61,6 +67,14 @@ Script_ContinueAndBattleNextOpponent:
 	applymovement PLAYER, MovementData_BattleTowerBattleRoomPlayerTurnsToFaceNextOpponent
 	applymovement BATTLETOWERBATTLEROOM_RECEPTIONIST, MovementData_BattleTowerBattleRoomReceptionistWalksAway
 	sjump Script_BattleRoomLoop
+
+;custom	- unused
+Script_test:
+	text "curr: @"
+	text_decimal wBaseUnusedFrontpic, 2, 5 ;this var won't work. todo- make a new one.
+	text " "
+	done
+;custom end
 
 Script_DontBattleNextOpponent:
 	writetext Text_SaveAndEndTheSession

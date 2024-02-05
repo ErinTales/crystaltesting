@@ -30,6 +30,19 @@ BattleTower1FCheckStateScene:
 	end
 
 .LeftWithoutSaving
+	;custom - Reset current to 0.
+	;opentext
+	;writetext Script_test
+	;waitbutton
+	
+	;readmem wBaseUnusedFrontpic
+	;setval 0
+	;writemem wBaseUnusedFrontpic
+	
+	;opentext
+	;writetext Script_test
+	;waitbutton
+	;custom end
 	sdefer BattleTower_LeftWithoutSaving
 	setval BATTLETOWERACTION_CHALLENGECANCELED
 	special BattleTowerAction
@@ -52,7 +65,7 @@ BattleTower1FRulesSign:
 	closetext
 	end
 
-
+;custom - new sign
 RecordCheckerSign:
 	opentext
 	writetext Text_WantToSeeRecord
@@ -67,6 +80,7 @@ RecordCheckerSign:
 .skip:
 	closetext
 	end
+;custom end
 
 BattleTower1FReceptionistScript:
 	setval BATTLETOWERACTION_GET_CHALLENGE_STATE ; readmem sBattleTowerChallengeState
@@ -371,16 +385,13 @@ Text_BattleTowerWelcomesYou:
 	line "to a BATTLE ROOM."
 	done
 
+;custom - text	
 Text_WantToSeeRecord:
 	text "BATTLE TOWER"
 	line "RECORD is"
 	
 	para "written here."
 	line "Check RECORD?"
-	done
-
-Text_TODO:
-	text "UNFINISHED"
 	done
 	
 Text_RecordSign:
@@ -390,15 +401,16 @@ Text_RecordSign:
 	
 Text_DisplayCurrent:
 	text "Current: @"
-	text_decimal wBaseUnusedFrontpic, 2, 5 ;unused var repurposed.
+	text_decimal wBaseUnusedFrontpic, 2, 5 ;this var won't work, TODO - make a new one.
 	text " "
 	done
 
 Text_DisplayBest:
 	text "Best: @"
-	text_decimal wBaseUnusedBackpic, 2, 5 ;unused var repurposed.
+	text_decimal wBaseUnusedBackpic, 2, 5 ;this var won't work, TODO - make a new one.
 	text " "
 	done
+;custom end
 
 Text_WantToGoIntoABattleRoom:
 	text "Want to go into a"
